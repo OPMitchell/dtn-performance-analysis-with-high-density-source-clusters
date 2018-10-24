@@ -2,7 +2,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage{titling}
 
-\setlength{\droptitle}{-10em}   % This is your set screw
+\setlength{\droptitle}{-5em}   % This is your set screw
+\usepackage[margin=3.0cm]{geometry}
  
 \title{Evaluating the Performance Characteristics of the Epidemic and Spray-and-Wait Routing Protocols During DOS Attacks}
 \author{
@@ -18,12 +19,20 @@
 \maketitle
  
 \tableofcontents
+\newpage
 
 \section{Introduction}
-Introduction
+
+In recent years, a growing number of devices have been utilizing networking technology in increasingly less traditional environments. These non internet-like networks can range from those with predictable mobility, such as transport systems, (e.g. buses and trams) to stochastically mobile networks, such as military/tactical networks. In all of these new environments, communication coverage is pervasive and essential for day-to-day operations, however, it's impossible to treat them like traditional networks with pre-determined communication paths due to the non-static nature of each node. As a result, computer networking in such environments faces new challenges such as large delays, intermittent communication links, and heterogeneous nodes with differing operating systems and network protocols.\\
+
+\noindent The aim of this project is to evaluate the performance characteristics of two different opportunistic routing protocols within real world scenarios, simulated by the Opportunistic Network Simulator (ONE). In the chosen scenarios, malicious nodes engaging in various DoS (Denial of Service) attacks are positioned within a network topology that represents the city of Helsinki and its transport network, including cars, buses and trams.
+To begin, this paper will give a brief overview of opportunistic networks, the 2 protocols, and the DoS attacks in question. Then, the functionality of the ONE Simulator will be described and the model of each scenario explained in detail, including their implementations. Using these models, simulations will be run and the results of their performances critically evaluated. A conclusion will then be drawn based on these results, summarising the pros and cons of opportunistic networks and their use in the observed scenarios. Finally, the paper closes with a wider discussion of the usefulness of opportunistic networks in related real-world scenarios.
  
-\section{Literature Review}
-Literature Review
+\section{Background}
+Background
+
+\subsection{Opportunistic Networks}
+Opportunistic Networks
 
 \subsection{Mobile Ad-Hoc Networks (MANETs)}
 Mobile Ad-Hoc Networks (MANETs)
@@ -33,12 +42,6 @@ Vehicular Ad-Hoc Networks (VANETs)
 
 \subsection{Delay Tolerant Networks (DTNs)}
 Delay Tolerant Networks (DTNs)
-
-\subsection{Opportunistic Networks}
-Opportunistic Networks
-
-\subsection{ONE Simulator}
-ONE Simulator
 
 \subsection{Delay Tolerant Network Protocols}
 Delay Tolerant Network Protocols
@@ -58,11 +61,11 @@ Black Hole Attack
 \subsubsection{Flood Attack}
 Flood Attack
 
-\section{Design}
-Design
+\section{ONE Simulator}
+ONE Simulator
 
-\section{Implementation}
-Implementation
+\section{Experiment}
+Experiment
 
 \section{Evaluation}
 Evaluation
@@ -87,6 +90,9 @@ Spray-and-Wait
 
 \section{Conclusion}
 Conclusion
+
+\section{Wider Discussion}
+Wider Discussion
 
 \addcontentsline{toc}{section}{References}
 \begin{thebibliography}{20}
