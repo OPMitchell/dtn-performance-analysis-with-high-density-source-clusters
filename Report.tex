@@ -1,11 +1,11 @@
-\documentclass{article}
+ \documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage{titling}
 
 \setlength{\droptitle}{-5em}   % This is your set screw
 \usepackage[margin=3.0cm]{geometry}
  
-\title{Evaluating the Performance Characteristics of the Epidemic and Spray-and-Wait Routing Protocols During DOS Attacks}
+\title{Evaluating the Performance Characteristics of the Epidemic and Spray-and-Wait Routing Protocols During DoS Attacks on Mobile Ad-Hoc Networks }
 \author{
   Oliver Mitchell\\
   \texttt{psyom1@nottingham.ac.uk}\\\\
@@ -23,22 +23,18 @@
 
 \section{Introduction}
 
-In recent years, a growing number of devices have been utilizing networking technology in increasingly less traditional environments. These non internet-like networks can range from those with predictable mobility, such as transport systems, (e.g. buses and trams) to stochastically mobile networks, such as military/tactical networks. In all of these new environments, communication coverage is pervasive and essential for day-to-day operations, however, it's impossible to treat them like traditional networks with pre-determined communication paths due to the non-static nature of each node. As a result, computer networking in such environments faces new challenges such as large delays, intermittent communication links, and heterogeneous nodes with differing operating systems and network protocols.\\
+In recent years, a growing number of devices have been utilizing networking technology in less traditional environments, ranging from the GPS tracking of wildlife over huge distances [5], to the proposed establishment of an "Interplanetary Internet" capable of transmitting data lightyears in distance [6]. These networks are decentralised and wireless, consisting of constantly mobile nodes, ranging from those with predictable mobility, such as transport systems, (e.g. buses and trams) to stochastically mobile networks, such as military/tactical networks. In all of these new environments, communication coverage is pervasive and essential for day-to-day operations, however, it's impossible to treat them like traditional networks with pre-determined communication paths due to their non-static nature. As a result, computer networking in such environments faces new challenges such as large delays, intermittent communication links, and heterogeneous nodes with differing operating systems and network protocols.\\
 
 \noindent The aim of this project is to evaluate the performance characteristics of two different opportunistic routing protocols within real world scenarios, simulated by the Opportunistic Network Simulator (ONE). In the chosen scenarios, malicious nodes engaging in various DoS (Denial of Service) attacks are positioned within a network topology that represents the city of Helsinki and its transport network, including cars, buses and trams.
 To begin, this paper will give a brief overview of opportunistic networks, the 2 protocols, and the DoS attacks in question. Then, the functionality of the ONE Simulator will be described and the model of each scenario explained in detail, including their implementations. Using these models, simulations will be run and the results of their performances critically evaluated. A conclusion will then be drawn based on these results, summarising the pros and cons of opportunistic networks and their use in the observed scenarios. Finally, the paper closes with a wider discussion of the usefulness of opportunistic networks in related real-world scenarios.
  
 \section{Background}
-Background
-
-\subsection{Opportunistic Networks}
-Opportunistic Networks
 
 \subsection{Mobile Ad-Hoc Networks (MANETs)}
 Mobile Ad-Hoc Networks (MANETs)
 
-\subsection{Vehicular Ad-Hoc Networks (VANETs)}
-Vehicular Ad-Hoc Networks (VANETs)
+\subsection{Opportunistic Networks}
+Opportunistic Networks
 
 \subsection{Delay Tolerant Networks (DTNs)}
 Delay Tolerant Networks (DTNs)
@@ -113,6 +109,20 @@ Farrell, S., \& Cahill, V. (2006) \textit{Delay- and Disruption-Tolerant Network
 \bibitem{TCP Protocol}
 Postel, J. (1981), "Transmission Control Protocol". RFC 793.
 
+\bibitem{ZebraNet}
+Juang, P., Oki, H., Wang, Y., Martonosi, M., Shiuan Peh, L., \& Rubenstein, D. (2002).
+"Energy-Efficient Computing for Wildlife Tracking: Design Tradeoffs and Early Experiences with ZebraNet".
+\textit{ACM SIGOPS Operating Systems Review} \textbf{36}(5) pp.96–107
+
+\bibitem{Interplanetary Internet}
+Jackson, J. (2005). 
+"The Interplanetary Internet"
+\textit{IEEE Spectrum}. Available at: https://spectrum.ieee.org/telecom/internet/the-interplanetary-internet [Accessed 24 Oct. 2018].
+
+\bibitem{Mobile Ad-Hoc Networks}
+Giordano, S (2002).
+"Mobile Ad-Hoc Networks"
+\textit{Handbook of Wireless Networks and Mobile Computing} pp.325-346
 
 \end{thebibliography}
  
