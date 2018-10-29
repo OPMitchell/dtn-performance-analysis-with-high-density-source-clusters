@@ -5,7 +5,7 @@
 \setlength{\droptitle}{-5em}   % This is your set screw
 \usepackage[margin=3.0cm]{geometry}
  
-\title{Evaluating the Performance Characteristics of the Epidemic and Spray-and-Wait Routing Protocols During DoS Attacks on Mobile Ad-Hoc Networks }
+\title{Evaluating the Performance Characteristics of the Epidemic and Spray-and-Wait Routing Protocols during a Black Hole Attack on an Opportunistic Network }
 \author{
   Oliver Mitchell\\
   \texttt{psyom1@nottingham.ac.uk}\\\\
@@ -22,24 +22,37 @@
 \newpage
 
 \section{Introduction}
+The aim of this project is to evaluate the performance characteristics of two different opportunistic routing protocols within a real world scenario, simulated by the Opportunistic Network Simulator (ONE). In the chosen scenario, malicious nodes engaging in black hole denial-of-service attacks are positioned within a network topology that represents the city of Helsinki and its transport network, including cars, buses and trams.\\
+\newline
+To begin, this paper will give a brief overview of opportunistic networks, the 2 protocols, and the DoS attack in question. Then, the functionality of the ONE simulator will be described and the model of the scenario explained in detail, including its implementation. Using this model, simulations will be run and the results of their performances critically evaluated. A conclusion will then be drawn based on these results, summarising the pros and cons of opportunistic networks and their use in the observed scenario. Finally, the paper closes with a wider discussion of the usefulness of opportunistic networks in related real world use-cases.
 
-In recent years, a growing number of devices have been utilizing networking technology in less traditional environments, ranging from the GPS tracking of wildlife over huge distances [5], to the proposed establishment of an "Interplanetary Internet" capable of transmitting data lightyears in distance [6]. These networks are decentralised and wireless, consisting of constantly mobile nodes, ranging from those with predictable mobility, such as transport systems, (e.g. buses and trams) to stochastically mobile networks, such as military/tactical networks. In all of these new environments, communication coverage is pervasive and essential for day-to-day operations, however, it's impossible to treat them like traditional networks with pre-determined communication paths due to their non-static nature. As a result, computer networking in such environments faces new challenges such as large delays, intermittent communication links, and heterogeneous nodes with differing operating systems and network protocols.\\
-
-\noindent The aim of this project is to evaluate the performance characteristics of two different opportunistic routing protocols within real world scenarios, simulated by the Opportunistic Network Simulator (ONE). In the chosen scenarios, malicious nodes engaging in various DoS (Denial of Service) attacks are positioned within a network topology that represents the city of Helsinki and its transport network, including cars, buses and trams.
-To begin, this paper will give a brief overview of opportunistic networks, the 2 protocols, and the DoS attacks in question. Then, the functionality of the ONE Simulator will be described and the model of each scenario explained in detail, including their implementations. Using these models, simulations will be run and the results of their performances critically evaluated. A conclusion will then be drawn based on these results, summarising the pros and cons of opportunistic networks and their use in the observed scenarios. Finally, the paper closes with a wider discussion of the usefulness of opportunistic networks in related real-world scenarios.
- 
 \section{Background}
+In recent years, a growing number of devices have been utilizing mobile networking technology in less traditional environments, ranging from the GPS tracking of wildlife over huge distances [5], to the proposed establishment of an "Interplanetary Internet", capable of transmitting data lightyears in distance [6]. These non-static networks are decentralised and wireless, consisting of constantly mobile nodes, ranging from those with predictable mobility, such as transport systems, (e.g. buses and trams) to those with stochastic mobility, such as military/tactical networks. In all of these new environments, communication coverage is pervasive and essential for day-to-day operations. However, it's impossible to treat them like traditional networks with pre-determined communication paths due to their constant reconfiguration and non-guaranteed connectivity. As a result, computer networks deployed in such environments face new challenges such as large delays, intermittent communication links, and heterogeneous nodes with differing operating systems and network protocols.
 
 \subsection{Mobile Ad-Hoc Networks (MANETs)}
-Mobile Ad-Hoc Networks (MANETs)
+A Mobile Ad-Hoc Networks (MANET) is a self-configuring network of mobile devices, with no fixed infrastructure, connected by wireless links. An important characteristic of a MANET is its included nodes' ability to move independently in any direction, forcing the network to reconfigure itself frequently. Each node acts as a client, server, and router simultaneously in order to transport packets from source to destination, thus nodes communicate with each other in a peer-to-peer fashion [8]. There are several important properties that define MANETs [7]:
+\begin{itemize}
+	\item Security is difficult to achieve because wireless links are vulnerable, the topology is dynamically changing, and there is no certification authority [9].
+	\item The use of wireless links results in a lower capacity than wired counterparts [7].
+	\item Nodes are mobile devices which rely on exhaustible battery power. Therefore saving energy is an important system design aspect [7].
+\end{itemize}
+MANETs assume high connectivity and established static routes for transmitting data between nodes in a multi-hop fashion. As a result, the routing process in MANETs requires the discovery of an end-to-end path before data can be transported. However, in mobile ad-hoc networks, the topology is dynamically changing and there many not always be a feasible end-to-end path between source and destination [7]. Resultantly, MANETs perform poorly when connections are intermittent or there are long delays. This problem presents the need for the improved protocols used in opportunistic networks and Delay Tolerant Networks (DTNs).
+
+\subsection{Vehicular Ad-Hoc Networks (VANETs)}
+Vehicular Ad-Hoc Networks (VANETs) are a type of MANET where the network's nodes are represented by vehicles. Though MANETs and VANETs share many characteristics, there are unique challenges exclusive to VANETs that affect their usability, efficiency, and therefore their system design [10]:
+\begin{itemize}
+	\item Vehicles have the potential to move at very high speeds which can reduce the length of time available for packet transfer between nodes communicating in proximity to each other [10]. As VANETs also require end-to-end paths to be established before data can be sent, this issue is compounded by the movement of intermediary nodes in multi-hop transmissions. The path may be established before transmission begins, but disrupted before the packet can reach its destination.
+	\item The data transmitted by vehicles may be critical and life-saving, such as road accidents, traffic information, or the location of casualties for ambulances. It is therefore essential that information is received correctly and timely [10].
+\end{itemize}
+It is useful to note that the movement of nodes in a VANET can be considered more predictable than coventional ad-hoc networks because vehicles follow set paths such as roads, railway lines, etc.
+
+\subsection{Delay/Disruption Tolerant Networks (DTNs)}
+In environments where disruptions and delays are expected, traditional networking protocols such as TCP [4] are unsuitable because they assume there is an end-to-end connection with low message loss and minimal delay. In decentralised, mobile ad-hoc networks, nodes are constantly moving and there is likely no feasible end-to-end path between source and destination. In order to combat the challenges presented by delays and disruptions, routing protocols have been developed which utilise a "store-and-forward" approach where data is gradually transported in single hops and stored in different nodes with the desire of eventually reaching its intended destination [3]. Typically, this approach to network architecture is called Delay/Disruption Tolerant Networking (DTN).
 
 \subsection{Opportunistic Networks}
-Opportunistic Networks
+Opportunistic Networks are different than MANETs in that connectivity and availability is not assumed. Only uses single-hop transmissions in the hope that the data will reach its destination.
 
-\subsection{Delay Tolerant Networks (DTNs)}
-Delay Tolerant Networks (DTNs)
-
-\subsection{Delay Tolerant Network Protocols}
+\subsection{Delay/Disruption Tolerant Network Protocols}
 Delay Tolerant Network Protocols
 
 \subsubsection{Epidemic}
@@ -48,14 +61,8 @@ Epidemic
 \subsubsection{Spray-and-Wait}
 Spray-and-Wait
 
-\subsection{DOS Attacks}
+\subsection{Black Hole Attacks}
 DOS Attacks
-
-\subsubsection{Black Hole Attack}
-Black Hole Attack
-
-\subsubsection{Flood Attack}
-Flood Attack
 
 \section{ONE Simulator}
 ONE Simulator
@@ -66,22 +73,10 @@ Experiment
 \section{Evaluation}
 Evaluation
 
-\subsection{Scenario 1 - Black Hole Attack}
-Scenario 1 - Black Hole Attack
-
-\subsubsection{Epidemic}
+\subsection{Epidemic in a Black Hole Attack Scenario}
 Epidemic
 
-\subsubsection{Spray-and-Wait}
-Spray-and-Wait
-
-\subsection{Scenario 2 - Flood Attack}
-Flood Attack
-
-\subsubsection{Epidemic}
-Epidemic
-
-\subsubsection{Spray-and-Wait}
+\subsection{Spray-and-Wait in a Black Hole Attack Scenario}
 Spray-and-Wait
 
 \section{Conclusion}
@@ -112,7 +107,7 @@ Postel, J. (1981), "Transmission Control Protocol". RFC 793.
 \bibitem{ZebraNet}
 Juang, P., Oki, H., Wang, Y., Martonosi, M., Shiuan Peh, L., \& Rubenstein, D. (2002).
 "Energy-Efficient Computing for Wildlife Tracking: Design Tradeoffs and Early Experiences with ZebraNet".
-\textit{ACM SIGOPS Operating Systems Review} \textbf{36}(5) pp.96–107
+\textit{ACM SIGOPS Operating Systems Review} \textbf{36}(5), pp.96–107
 
 \bibitem{Interplanetary Internet}
 Jackson, J. (2005). 
@@ -123,6 +118,21 @@ Jackson, J. (2005).
 Giordano, S (2002).
 "Mobile Ad-Hoc Networks"
 \textit{Handbook of Wireless Networks and Mobile Computing} pp.325-346
+
+\bibitem{Trends in MANETs}
+Singh, S., Dutta, S.C., \& Singh D.K. (2012). 
+"A Study on Recent Research Trends in MANET"
+\textit{International Journal of Research and Reviews in Computer Science (IJRRCS) \textbf{3}(3), pp.1654-1658} 
+
+\bibitem{Security in MANETs}
+Djenouri, D., Khelladi, L., \& Badache, A.N. (2005).
+"A Survey of Security Issues in Mobile Ad Hoc and Sensor Networks"
+\textit{IEEE Communications Surveys and Tutorials} \textbf{7}(4), pp.2-28
+
+\bibitem{VANETs}
+Dahiya, A., \& Chauhan, R.K. (2010).
+"A Comparative Study of MANET and VANET Environment"
+\textit{Journal of Computing} \textbf{2}(7), pp.87-92
 
 \end{thebibliography}
  
