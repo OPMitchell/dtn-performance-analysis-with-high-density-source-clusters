@@ -48,12 +48,11 @@ It is useful to note that the movement of nodes in a VANET can be considered mor
 
 \subsection{Delay/Disruption Tolerant Networks (DTNs)}
 In environments where disruptions and delays are expected, traditional networking protocols such as TCP [4] are unsuitable because they assume there is an end-to-end connection with low message loss and minimal delay. In decentralised, mobile ad-hoc networks, nodes are constantly moving and there is likely no feasible end-to-end path between source and destination. In order to combat the challenges presented by delays and disruptions, the assumption of an existing end-to-end path from source to destination is dropped. Instead, routing protocols have been developed which utilise a "store-and-forward" approach where data is gradually transported in single hops and stored in different nodes with the desire of eventually reaching its intended destination [3]. Typically, this approach to network architecture is called Delay/Disruption Tolerant Networking (DTN).\\
-
 \noindent The performance of a DTN depends on the routing protocol used in a given scenario. DTN routing protocols can either be dissemination based (flooding) or history based (forwarding) [11]:\\
-
-In a dissemination (flooding) based protocol, when one node encounters another it will forward a copy of its message without deleting its own. This means there are multiple copies of the message in the network with aims to increase the probability that a message will eventually reach its destination. However, in this approach a large amount of resources are used, particularly buffer space. Once the message has been delivered, all existing copies of the message are made redundant but still continue to exist, taking up unecessary space [11].\\
-
-In a history (forwarding) based protocol, a message can only be stored by a single node at a time. In constrast to a dissemination based scheme, the node forwarding the message deletes its own copy, making the receiver the sole custodian of the message. Forwarding based protocols tend to use heuristics to evaluate encountered nodes and work out which path is most likely to get the message to its destination the quickest.
+\begin{itemize}
+	\item In a dissemination (flooding) based protocol, when one node encounters another it will forward a copy of its message without deleting its own. This means there are multiple copies of the message in the network with aims to increase the probability that a message will eventually reach its destination. However, in this approach a large amount of resources are used, particularly buffer space. Once the message has been delivered, all existing copies of the message are made redundant but still continue to exist, taking up unecessary space [11].
+	\item In a history (forwarding) based protocol, a message can only be stored by a single node at a time. In constrast to a dissemination based scheme, the node forwarding the message deletes its own copy, making the receiver the sole custodian of the message. Forwarding based protocols tend to use heuristics to evaluate encountered nodes and work out which path is most likely to get the message to its destination the quickest.
+\end{itemize}
 \newpage
 
 \subsection{Opportunistic Networks}
