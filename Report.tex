@@ -47,7 +47,7 @@ Vehicular Ad-Hoc Networks (VANETs) are a type of MANET where the network's nodes
 It is useful to note that the movement of nodes in a VANET can be considered more predictable than coventional ad-hoc networks because vehicles follow set paths such as roads, railway lines, etc.
 
 \subsection{Delay/Disruption Tolerant Networks (DTNs)}
-In environments where disruptions and delays are expected, traditional networking protocols such as TCP [4] are unsuitable because they assume there is an end-to-end connection with low message loss and minimal delay. In decentralised, mobile ad-hoc networks, nodes are constantly moving and there is likely no feasible end-to-end path between source and destination. In order to combat the challenges presented by delays and disruptions, the assumption of an existing end-to-end path from source to destination is dropped. Instead, routing protocols have been developed which utilise a "store-and-forward" approach where data is gradually transported in single hops and stored in different nodes with the desire of eventually reaching its intended destination [3]. Typically, this approach to network architecture is called Delay/Disruption Tolerant Networking (DTN).\\
+In environments where disruptions and delays are expected, traditional networking protocols such as TCP [4] are unsuitable because they assume there is an end-to-end connection with low message loss and minimal delay [3]. In decentralised, mobile ad-hoc networks, nodes are constantly moving and there is likely no feasible end-to-end path between source and destination. In order to combat the challenges presented by delays and disruptions, the assumption of an existing end-to-end path from source to destination is dropped. Instead, routing protocols have been developed which utilise a "store-and-forward" approach where data is gradually transported in single hops and stored in different nodes with the desire of eventually reaching its intended destination [3]. Typically, this approach to network architecture is called Delay/Disruption Tolerant Networking (DTN).\\
 \noindent The performance of a DTN depends on the routing protocol used in a given scenario. DTN routing protocols can either be dissemination based (flooding) or history based (forwarding) [11]:\\
 \begin{itemize}
 	\item In a dissemination (flooding) based protocol, when one node encounters another it will forward a copy of its message without deleting its own. This means there are multiple copies of the message in the network with aims to increase the probability that a message will eventually reach its destination. However, in this approach a large amount of resources are used, particularly buffer space. Once the message has been delivered, all existing copies of the message are made redundant but still continue to exist, taking up unecessary space [11].
@@ -55,17 +55,15 @@ In environments where disruptions and delays are expected, traditional networkin
 \end{itemize}
 \newpage
 
-\subsection{Opportunistic Networks}
-
-
-\subsection{Delay/Disruption Tolerant Network Protocols}
-Delay Tolerant Network Protocols
-
+\subsection{Delay/Disruption Tolerant Network (DTN) Protocols}
 \subsubsection{Epidemic}
-Epidemic
+Epidemic [12][13] is a simple dissemination based routing protocol and is somewhat naïve when compared to other, more advanced protocols. The objective of the epidemic routing protocol is to pass copies of a message to as many nodes as possible in the hope that it eventually reaches its intended destination with minimal delay. Any node that doesn't already have the message will be given a copy and there can exist as many copies of the message as there are nodes in the network. The protocol is called 'epidemic' because this indiscriminate method of dissemination is similar to the way in which an infectious disease can propogate in a community; spreading when people come into contact with each other.\\
+\newline Theoretically, Epidemic can be seen as an optimal routing protocol if the network's resource are unconstrained. However, in a deployed DTN the size of each node's message buffer is finite and because no acknowledgement of receipt is transmitted by the destination node, it is likely that redundant data will still take up unecessary space in the network. Some research has produced extended versions of the epidemic protocol which mitigate this issue, typically by sending an additional message that confirms receipt and orders 'infected' nodes to delete redundant messages [13].
 
 \subsubsection{Spray-and-Wait}
 Spray-and-Wait
+
+\subsection{Opportunistic Networks}
 
 \subsection{Black Hole Attacks}
 DOS Attacks
@@ -146,6 +144,16 @@ Rani, S., \& Abhilasha (2015).
 Forwarding Protocols based on Delay Tolerant
 Networks: A Review"
 \textit{International Journal of Science and Research (IJSR)} \textbf{4}(7), pp.1625-1629
+
+\bibitem{Epidemic}
+Vahdat, A., \& Becker, D. (2000).
+"Epidemic Routing for Partially-Connected Ad Hoc Networks"
+\textit{Department of Computer Science, Duke University, Durham}
+
+\bibitem{Epidemic Performance}
+Zhang, X., Neglia, G., Kurose, J., \& Towsley, D. (2007)
+"Performance Modelling of Epidemic Routing"
+\textit{Computer Networks} \textbf{51}(10), pp.2867-2891
 
 \end{thebibliography}
  
