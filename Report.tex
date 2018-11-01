@@ -48,10 +48,10 @@ It is useful to note that the movement of nodes in a VANET can be considered mor
 
 \subsection{Delay/Disruption Tolerant Networks (DTNs)}
 In environments where disruptions and delays are expected, traditional networking protocols such as TCP [4] are unsuitable because they assume there is an end-to-end connection with low message loss and minimal delay [3]. In decentralised, mobile ad-hoc networks, nodes are constantly moving and there is likely no feasible end-to-end path between source and destination. In order to combat the challenges presented by delays and disruptions, the assumption of an existing end-to-end path from source to destination is dropped. Instead, routing protocols have been developed which utilise a "store-and-forward" approach where data is gradually transported in single hops and stored in different nodes with the desire of eventually reaching its intended destination [3]. Typically, this approach to network architecture is called Delay/Disruption Tolerant Networking (DTN).\\
-\noindent The performance of a DTN depends on the routing protocol used in a given scenario. DTN routing protocols can either be dissemination based (flooding) or history based (forwarding) [11]:\\
+\noindent The performance of a DTN depends on the routing protocol used in a given scenario. DTN routing protocols can either be replication based (flooding) or forwarding based [11]:\\
 \begin{itemize}
-	\item In a dissemination (flooding) based protocol, when one node encounters another it will forward a copy of its message without deleting its own. This means there are multiple copies of the message in the network with aims to increase the probability that a message will eventually reach its destination. However, in this approach a large amount of resources are used, particularly buffer space. Once the message has been delivered, all existing copies of the message are made redundant but still continue to exist, taking up unecessary space [11].
-	\item In a history (forwarding) based protocol, a message can only be stored by a single node at a time. In constrast to a dissemination based scheme, the node forwarding the message deletes its own copy, making the receiver the sole custodian of the message. Forwarding based protocols tend to use heuristics to evaluate encountered nodes and work out which path is most likely to get the message to its destination the quickest.
+	\item In a replication based protocol, when one node encounters another it will forward a copy of its message without deleting its own. This means there are multiple copies of the message in the network with aims to increase the probability that a message will eventually reach its destination. However, in this approach a large amount of resources are used, particularly buffer space. Once the message has been delivered, all existing copies of the message are made redundant but still continue to exist, taking up unecessary space [11].
+	\item In a forwarding based protocol, a message can only be stored by a single node at a time. In constrast to a dissemination based scheme, the node forwarding the message deletes its own copy, making the receiver the sole custodian of the message. Forwarding based protocols tend to use heuristics to evaluate encountered nodes and work out which path is most likely to get the message to its destination the quickest.
 \end{itemize}
 \newpage
 
@@ -61,12 +61,17 @@ Epidemic [12][13] is a simple dissemination based routing protocol and is somewh
 \newline Theoretically, Epidemic can be seen as an optimal routing protocol if the network's resource are unconstrained. However, in a deployed DTN the size of each node's message buffer is finite and because no acknowledgement of receipt is transmitted by the destination node, it is likely that redundant data will still take up unecessary space in the network. Some research has produced extended versions of the epidemic protocol which mitigate this issue, typically by sending an additional message that confirms receipt and orders 'infected' nodes to delete redundant messages [13].
 
 \subsubsection{Spray-and-Wait}
-Spray-and-Wait
+Spray-and-Wait [14] is a routing protocol that aims to achieve the advantages of Epidemic's high delivery probability but with far less resource utilisation. It achieves this by disseminating a finite quantity of message copies (spraying) with the recipients storing the message until direct contact with the destination node. The maximum number of messages to spray is typically configured by a variable, \textbf{\textit{L}}. There are 2 versions of the spray-and-wait protocol: vanilla and binary. The difference between them is the method used to disseminate the message copies to \textbf{\textit{L}} different nodes.
+\begin{itemize}
+	\item \textbf{Vanilla} - transmit one copy of the message to the first \textbf{\textit{L} - 1} nodes encountered. Each node with 1 copy of the message waits until the destination node comes into direct contact.
+	\item \textbf{Binary} - start with \textbf{\textit{L}} copies and transmit \textbf{\textit{L}/2} copies to the first node encountered. Both these nodes then transmit \textbf{\textit{n}/2} copies of the message to any new nodes they encounter that do not have the message, where \textbf{\textit{n}} is the total number of messages a node currently holds. When a node has 1 copy remaining, it waits until the destination node comes into direct contact.
+\end{itemize}
+Binary has an advantage over vanilla because messages are disseminated away from the source at a faster rate [14].
 
 \subsection{Opportunistic Networks}
 
 \subsection{Black Hole Attacks}
-DOS Attacks
+Black Hole Attack [2]
 
 \section{ONE Simulator}
 ONE Simulator
@@ -97,10 +102,10 @@ Huang, C., Lan, K., \& Tsai, C. (2008).
 "A Survey of Opportunistic Networks". 
 \textit{22nd International Conference on Advanced Information Networking and Applications - Workshops (aina workshops 2008)}, pp.1672-1677.
 
-\bibitem{DoS Attacks in Mobile Ad-Hoc Networks: A Survey}
-Jhaveri, R., Patel, S., \& Jinwala, D. (2012).
-"DoS Attacks in Mobile Ad-Hoc Networks: A Survey".
-\textit{2012 Second International Conference on Advanced Computing \& Communication Technologies}, pp.535-541.
+\bibitem{Black Hole Attacks}
+Tseng, F.H., Chou, L.D, \& Chao H.C. (2011)
+"A Survey of Black Hole Attacks in Wireless Mobile Ad Hoc Networks"
+\textit{Human-centric Computing and Information Sciences} \textbf{1}(4)
 
 \bibitem{Delay- and Disruption-Tolerant Networking}
 Farrell, S., \& Cahill, V. (2006) \textit{Delay- and Disruption-Tolerant Networking}, Artech House, Inc., Norwood, MA.
@@ -154,6 +159,18 @@ Vahdat, A., \& Becker, D. (2000).
 Zhang, X., Neglia, G., Kurose, J., \& Towsley, D. (2007)
 "Performance Modelling of Epidemic Routing"
 \textit{Computer Networks} \textbf{51}(10), pp.2867-2891
+
+\bibitem{Spray and Wait}
+Spyropoulos, T., Psounis, K., \& Raghavendra, C.S. (2005)
+"Spray and Wait: An Efficient Routing Scheme for
+Intermittently Connected Mobile Networks"
+\textit{Proceedings of the 2005 ACM SIGCOMM Workshop on Delay-Tolerant Networking}, pp.252-259
+
+\bibitem{Packet Dropping}
+Zhang, X., Wu, S.F., Fu, Z., \& Wu, T.S. (2000)
+"Malicious Packet Dropping: How It Might Impact the TCP Performance and How
+We Can Detect It"
+\textit{Proceedings of the 2000 International Conference on Network Protocols}, pp.263-272
 
 \end{thebibliography}
  
