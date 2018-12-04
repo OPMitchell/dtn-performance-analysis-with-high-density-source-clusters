@@ -51,7 +51,7 @@ In environments where disruptions and delays are expected, traditional networkin
 \noindent The performance of a DTN depends on the routing protocol used in a given scenario. DTN routing protocols can either be replication based (flooding) or forwarding based [11]:\\
 \begin{itemize}
 	\item In a replication based protocol, when one node encounters another it will forward a copy of its message without deleting its own. This means there are multiple copies of the message in the network with aims to increase the probability that a message will eventually reach its destination. However, in this approach a large amount of resources are used, particularly buffer space. Once the message has been delivered, all existing copies of the message are made redundant but still continue to exist, taking up unecessary space [11].
-	\item In a forwarding based protocol, a message can only be stored by a single node at a time. In constrast to a dissemination based scheme, the node forwarding the message deletes its own copy, making the receiver the sole custodian of the message. Forwarding based protocols tend to use heuristics to evaluate encountered nodes and work out which path is most likely to get the message to its destination the quickest.
+	\item In a forwarding based protocol, a message can only be stored by a single node at a time. In constrast to a replication based scheme, the node forwarding the message deletes its own copy, making the receiver the sole custodian of the message. Forwarding based protocols tend to use heuristics to evaluate encountered nodes and work out which path is most likely to get the message to its destination the quickest.
 \end{itemize}
 \newpage
 
@@ -70,11 +70,19 @@ Binary has an advantage over vanilla because messages are disseminated away from
 
 \subsection{Opportunistic Networks}
 
+
 \subsection{Black Hole Attacks}
-Black Hole Attack [2]
+Black hole attacks (also known as packet dropping attacks)[2][15] are a form of denial of service (DoS) attack where a connected node erroneously advertises itself as an opportunistic next-hop in the route of a packet's transmission. Once the malicious node receives a packet it does not forward it, preventing the message from ever reaching its destination.\\
+\newline Despite their directness, black hole attacks can be difficult to detect; more sophisticated attackers are likely to drop small quantities of packets over specific time periods, rather than dropping all packets ad infinitum. This is harder to detect because some traffic still flows over the network. Additionally, some research has defined "collaborative" black hole attacks [2] where multiple malicious nodes work together to fabricate routing information and disrupt the flow of packets.
+This paper observes scenarios involving both single and collaborative black hole attacks.
 
 \section{ONE Simulator}
-ONE Simulator
+The ONE (Opportunistic Network Environment) Simulator [16][17] is a DTN simulator developed and maintained by researchers on the SINDTN and CATDTN projects and supported by Nokia Research Center (Finland). Where existing DTN simulators focused on solely on routing simulation, ONE combines DTN routing, mobility modelling, and visualisation into one package [16]. It is a complex tool which is extensible and provides useful modules for the reporting and analysis of simulated network environments.\\
+\newline ONE is useful for comparing, contrasting and analysing the performance of opportunistic networking protocols in different scenarios, making it the ideal tool for this research article. Scenarios (or network models) are comprised of network nodes (hosts) which all possess user-specified networking interfaces, energy sources, buffer-sizes, and computing power. Collections of identical nodes can be defined as groups with default properties, though an individual node's settings can be overwritten if necessary, for example, to ensure a node uses a different routing protocol from the rest of its group. Nodes act autonomously, passing messages to other nodes within their communication range according to their designated routing protocol.\\ 
+\newline ONE also makes a comprehensive framework for the mobility of nodes available to the user, allowing them to customise the travel speed of individual nodes or groups of nodes, and even import real-world movement traces for nodes to follow. This high fidelity node mobility framework allows users to easily differentiate between different node types (e.g. pedestrians will move slower than cars and follow a different route) and permits the creation of highly accurate scenarios that use real-world data, or hybrid scenarios which combine real traces with user-defined rules.\\
+\newline Creating custom scenarios involves the editing of the ONE simulator's config files.\\
+\newline The ONE Simulator provides a GUI.\\
+\newline The ONE Simulator can be extended.\\
 
 \section{Experiment}
 Experiment
@@ -171,6 +179,14 @@ Zhang, X., Wu, S.F., Fu, Z., \& Wu, T.S. (2000)
 "Malicious Packet Dropping: How It Might Impact the TCP Performance and How
 We Can Detect It"
 \textit{Proceedings of the 2000 International Conference on Network Protocols}, pp.263-272
+
+\bibitem{ONE Sim}
+Karänen, A. (2008).
+"Opportunistic Network Environment Simulator".
+\textit{Helsinki University of Technology, Department of Communications and Networking}
+
+\bibitem{ONE Sim Website}
+The ONE (Opportunistic Network Environment Simulator). Available at: https://akeranen.github.io/the-one/ [Accessed 4th Dec. 2018]
 
 \end{thebibliography}
  

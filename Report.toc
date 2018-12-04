@@ -8,11 +8,11 @@
 \contentsline {subsubsection}{\numberline {2.4.2}Spray-and-Wait}{4}
 \contentsline {subsection}{\numberline {2.5}Opportunistic Networks}{4}
 \contentsline {subsection}{\numberline {2.6}Black Hole Attacks}{4}
-\contentsline {section}{\numberline {3}ONE Simulator}{4}
-\contentsline {section}{\numberline {4}Experiment}{4}
+\contentsline {section}{\numberline {3}ONE Simulator}{5}
+\contentsline {section}{\numberline {4}Experiment}{5}
 \contentsline {section}{\numberline {5}Evaluation}{5}
 \contentsline {subsection}{\numberline {5.1}Epidemic in a Black Hole Attack Scenario}{5}
 \contentsline {subsection}{\numberline {5.2}Spray-and-Wait in a Black Hole Attack Scenario}{5}
 \contentsline {section}{\numberline {6}Conclusion}{5}
-\contentsline {section}{\numberline {7}Wider Discussion}{5}
-\contentsline {section}{References}{5}
+\contentsline {section}{\numberline {7}Wider Discussion}{6}
+\contentsline {section}{References}{6}
