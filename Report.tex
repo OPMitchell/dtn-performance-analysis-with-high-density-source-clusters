@@ -110,12 +110,14 @@ The aim of this paper is to evaluate the performance characteristics of the Epid
  Node Types & Cars, Pedestrians, Static (Hospital)
  Message Size & 50-500KB
  Message TTL & 60 minutes
- Network Interface & 802.11b
+ Network Interface & Wi-Fi 802.11p
  Network Range & 250 metres
- Network Rate & 10MB/S
+ Network Rate & 10MB/s
  Buffer Size & 10MB
 \end{tabular}
 \end{center}
+
+Some common settings have been selected for every scenario. All nodes utilise network interfaces which conform to the 802.11p standard [18]. This standard defines wireless access in vehicular environments (WAVE) and is used in the real world for vehicle-to-vehicle communication [19]. A range of 250 metres and a transfer rate of 10MB/s has been selected as a close representation of this standard, taking into consideration limitations such as obstructed signal strength in built-up urban areas. All messages in the simulation represent emergency information which is typically small in size (50-500KB) and uses a relatively short time-to-live (TTL) of 60 minutes. This short TLL ensures large amount of messages do not amass, congesting the network unnecessarily.
 
 \section{Evaluation}
 Evaluation
@@ -211,6 +213,14 @@ Karänen, A. (2008).
 
 \bibitem{ONE Sim Website}
 The ONE (Opportunistic Network Environment Simulator). Available at: https://akeranen.github.io/the-one/ [Accessed 4th Dec. 2018]
+
+\bibitem{802.11b}
+Jiang, D. \& Delgrossi, L. (2008)
+``IEEE 802.11p: Towards an International Standard for Wireless Access in Vehicular Environments.'' 
+\textit{In: Vehicular Technology Conference, 2008. VTC Spring 2008. IEEE}, pp 2036-2040.
+
+\bibitem{WAVE}
+CA Engineering - 802.11p Automotive. Available at: https://www.caengineering.com/technologies/?a=802.11-wi-fi&id=802.11p-automotive [Accessed 9th Dec. 2018]
 
 \end{thebibliography}
  
