@@ -5,7 +5,7 @@
 \setlength{\droptitle}{-5em}   % This is your set screw
 \usepackage[margin=3.0cm]{geometry}
  
-\title{Evaluating the Performance Characteristics of the Epidemic and Spray-and-Wait Routing Protocols during a Black Hole Attack on an Opportunistic Network }
+\title{Evaluating the Performance Characteristics of Opportunistic Routing Protocols during a Hybrid, Emergency Fire-Rescue and Malicious Black-Hole Attack in Helsinki}
 \author{
   Oliver Mitchell\\
   \texttt{psyom1@nottingham.ac.uk}\\\\
@@ -22,7 +22,7 @@
 \newpage
 
 \section{Introduction}
-The aim of this project is to evaluate the performance characteristics of two different opportunistic routing protocols within a real world scenario, simulated by the Opportunistic Network Simulator (ONE). In the chosen scenario, malicious nodes engaging in black hole denial-of-service attacks are positioned within a network topology that represents the city of Helsinki and its transport network during an emergency situation.\\
+The aim of this project is to evaluate the performance characteristics of two different opportunistic routing protocols within a real world scenario, simulated by the Opportunistic Network Simulator (ONE). In the chosen scenario, malicious nodes engaging in black hole denial-of-service attacks are positioned within a network topology that represents the city of Helsinki and its transport network during an emergency fire-rescue situation.\\
 \newline
 To begin, this paper will give a brief overview of opportunistic networks, the 2 protocols, and the DoS attack in question. Then, the functionality of the ONE simulator will be described and the model of the scenario explained in detail, including its implementation. Using this model, simulations will be run and the results of their performances critically evaluated. A conclusion will then be drawn based on these results, summarising the pros and cons of both opportunistic networks protocols and their use in the observed scenario. Finally, the paper closes with a wider discussion of the usefulness of opportunistic networks in related real world use-cases.
 
@@ -87,16 +87,38 @@ The ONE (Opportunistic Network Environment) Simulator [16][17] is a DTN simulato
 \newline Finally, the ONE Simulator is open-source and can therefore be extended in any way the user sees fit. This typically includes the modification of existing class files or the creation of new ones. For example, to use an unimplemented routing protocol the user would have to write a new set of source files to include in the software package. The ONE Simulator is very well documented and including new functionality is generally a straightforward process and there are many well-structured classes to inherit from too; the software was built with extension in mind.\\
 
 \section{Experiment}
-Experiment
+\subsection{Scenario Description}
+The aim of this paper is to evaluate the performance characteristics of the Epidemic and Spray-and-Wait routing protocols within a pseudo-real world scenario. The scenario in question is described in this section:\\
+
+\newline ``Kiasma'', the Helsinki museum of contemporary art has become the subject of an arson attack conducted by a group of nefarious criminals. Trapped inside the museum are a number of civilian victims who require immediate rescue and assistance from the city's emergency services. In order to do so, the local Helsinki hospital must be contacted. Messages are created by the trapped victims, relayed to vehicles passing local to the museum, and hopefully delivered to their final destination: the Helsinki hospital several streets away.\\
+
+\newline This scenario has been created using the ONE simulator. However, three slightly different versions of the scenario will each be simulated to evaluate how both routing protocols perform:
+
+\begin{enumerate}
+	\item \textbf{Simulation 1 - }The trapped victims are simulated as a single node in the network that moves randomly within a small, pre-defined range and creates its own messages (Figure 1).
+	\item \textbf{Simulation 2 - }10 trapped victims are simulated as a single node each. Each node moves randomly within a small, pre-defined range and is able to create its own messages. Accordingly, messages are likely to be first sent to other victims trapped in the museum before reaching passing vehicles outside. This was designed to simulate a victim's likely response in such a scenario: contacting and finding their friends and family who are trapped in the building with them (Figure 2).
+	\item \textbf{Simulation 3 - }Identical to Simulation 2 but the criminals have also set up mobile ``black-hole'' nodes in passing vehicles in an attempt to intercept and prevent the victims' messages reaching the hospital (Figure 3).
+\end{enumerate}
+
+\newline Each of these scenario versions are considered twice (once for each protocol), for a total of 6 separate simulations. 
+
+\subsection{Common Simulation Parameters}
+\begin{center}
+\begin{tabular}{ c c }
+ \textbf{Parameter} & \textbf{Value}
+ Simulation Time & 120 Minutes
+ Node Types & Cars, Pedestrians, Static (Hospital)
+ Message Size & 50-500KB
+ Message TTL & 60 minutes
+ Network Interface & 802.11b
+ Network Range & 250 metres
+ Network Rate & 10MB/S
+ Buffer Size & 10MB
+\end{tabular}
+\end{center}
 
 \section{Evaluation}
 Evaluation
-
-\subsection{Epidemic in a Black Hole Attack Scenario}
-Epidemic
-
-\subsection{Spray-and-Wait in a Black Hole Attack Scenario}
-Spray-and-Wait
 
 \section{Conclusion}
 Conclusion
