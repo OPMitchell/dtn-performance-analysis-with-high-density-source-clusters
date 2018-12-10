@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.23)  10 DEC 2018 09:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.23)  10 DEC 2018 12:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -532,20 +532,6 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.105 \newline
-               Each version of the scenario is considered twice (once for ea...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
 l.108 \newline
                Some common settings have been selected for every scenario. A...
 
@@ -559,25 +545,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 108--109
  []
 
 [6] [7]
-Underfull \hbox (badness 10000) in paragraph at lines 163--166
+Underfull \hbox (badness 10000) in paragraph at lines 219--222
 []\OT1/cmr/m/n/10 Jackson, J. (2005). "The In-ter-plan-e-tary In-ter-net" \OT1/
 cmr/m/it/10 IEEE Spec-trum\OT1/cmr/m/n/10 . Avail-able at:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 163--166
+Underfull \hbox (badness 10000) in paragraph at lines 219--222
 \OT1/cmr/m/n/10 https://spectrum.ieee.org/telecom/internet/the-interplanetary-i
 nternet [Ac-cessed 24 Oct.
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 222--223
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 278--279
 []\OT1/cmr/m/n/10 The ONE (Op-por-tunis-tic Net-work En-vi-ron-ment Sim-u-la-to
 r). Avail-able at:
  []
 
 ! Misplaced alignment tab character &.
-l.230 ...neering.com/technologies/?a=802.11-wi-fi&
+l.286 ...neering.com/technologies/?a=802.11-wi-fi&
                                                   id=802.11p-automotive [Acc...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -587,16 +573,16 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-Overfull \hbox (54.22702pt too wide) in paragraph at lines 230--231
+Overfull \hbox (54.22702pt too wide) in paragraph at lines 286--287
 []\OT1/cmr/m/n/10 CA En-gi-neer-ing - 802.11p Au-to-mo-tive. Avail-able at: htt
 ps://www.caengineering.com/technologies/?a=802.11-
  []
 
-[8] (./Report.aux) ) 
+[9] (./Report.aux) ) 
 Here is how much of TeX's memory you used:
  2225 strings out of 493029
  33496 string characters out of 6136233
- 107646 words of memory out of 5000000
+ 109646 words of memory out of 5000000
  5782 multiletter control sequences out of 15000+600000
  8769 words of font info for 31 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -610,10 +596,10 @@ e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Report.pdf (8 pages, 149352 bytes).
+Output written on Report.pdf (9 pages, 153457 bytes).
 PDF statistics:
- 67 PDF objects out of 1000 (max. 8388607)
- 47 compressed objects within 1 object stream
+ 70 PDF objects out of 1000 (max. 8388607)
+ 49 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
