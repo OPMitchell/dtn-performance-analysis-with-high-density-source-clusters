@@ -97,8 +97,8 @@ This scenario has been created using the ONE simulator. However, three slightly 
 \begin{tabular}{|l|p{13cm}|}
 \hline
 \textbf{Scenario} & \textbf{Description} \\ \hline
-\textbf{1} & The trapped victims are simulated as a single node in the network that moves randomly within a small, pre-defined range and creates its own messages (Figure 1). \\ \hline
-\textbf{2} & 10 trapped victims are simulated as a single node each. Each node moves randomly within a small, pre-defined range and is able to create its own messages. Accordingly, messages are likely to be first sent to other victims trapped in the museum before reaching passing vehicles outside. This was designed to simulate a victim's likely response in such a scenario: contacting and finding their friends and family who are trapped in the building with them (Figure 2). \\ \hline
+\textbf{1} & The trapped victims are simulated by a single node in the network that moves randomly within a small pre-defined range and creates its own messages (Figure 1). \\ \hline
+\textbf{2} & 10 trapped victims are simulated by a single node each. Each node moves randomly within a small pre-defined range and is able to create its own messages. Accordingly, messages are likely to be first sent to other victims trapped in the museum before reaching passing vehicles outside. This was designed to simulate a victim's likely response in such a scenario: contacting and finding their friends and family who are trapped in the building with them (Figure 2). \\ \hline
 \textbf{3} & Identical to scenario 2 but the criminals have also set up mobile ``black-hole'' nodes in passing vehicles in an attempt to intercept and prevent the victims' messages reaching the hospital (Figure 3). \\ \hline
 \end{tabular}
 \end{center}
@@ -122,12 +122,62 @@ Buffer Size & 10MB \\ \hline
 \end{center}
 
 \subsection{Group Parameters}
+Talk about cluster movement here
 \subsubsection{Scenario 1}
 \subsubsection{Scenario 2}
 \subsubsection{Scenario 3}
 
 \section{Evaluation}
-Evaluation
+\subsection{Scenario 1}
+In this scenario, the trapped victims are simulated by a single node in the network that moves randomly within a small pre-defined range and creates its own messages
+
+\begin{center}
+\begin{tabular}{|r|c|}
+\hline
+\textbf{Parameter} & \textbf{Epidemic} \\ \hline
+Messages Created & 243 \\ \hline
+Messages Started & 329498 \\ \hline
+Messages Relayed & 329491 \\ \hline
+Messages Dropped & 326090 \\ \hline
+Messages Delivered & 91 \\ \hline
+Delivery Probability & 37.5\%\\ \hline
+Overheard Ratio & 3619.8 \\ \hline
+Average Latency & 1083.9 \\ \hline
+Median Hop Count & 16 \\ \hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{|r|c|c|c|c|c|}
+\hline
+\textbf{Parameter} & \textbf{SprayAndWaitB6} & \textbf{SprayAndWaitB12} & \textbf{SprayAndWaitB18} & \textbf{SprayAndWaitB24} & \textbf{SprayAndWaitB30} \\ \hline
+Messages Created & 243 & 243 & 243 & 243 & 243 \\ \hline
+Messages Started & 1215 & 2714 & 4212 & 5648 & 6940 \\ \hline
+Messages Relayed & 1215 & 2714 & 4212 & 5648 & 6940 \\ \hline
+Messages Dropped & 1124 & 2332 & 3088 & 4026 & 5090 \\ \hline
+Messages Delivered & 0 & 45 & 115 & 163 & 169 \\ \hline
+Delivery Probability & 0\% & 18.5\% & 47.3\% & 67.1\% & 69.6\% \\ \hline
+Overheard Ratio & N/A & 59.3 & 35.6 & 33.7 & 40.1 \\ \hline
+Average Latency & N/A & 1621.4 & 1464.7 & 1392.1 & 1316.6 \\ \hline
+Median Hop Count & 0 & 4 & 4 & 4 & 4 \\ \hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{|r|c|c|c|c|c|}
+\hline
+\textbf{Parameter} & \textbf{SprayAndWaitV6} & \textbf{SprayAndWaitV12} & \textbf{SprayAndWaitV18} & \textbf{SprayAndWaitV24} & \textbf{SprayAndWaitV30} \\ \hline
+Messages Created & 243 & 243 & 243 & 243 & 243 \\ \hline
+Messages Started & 1215 & 2703 & 4154 & 5418 & 6158 \\ \hline
+Messages Relayed & 1215 & 2703 & 4154 & 5418 & 6158 \\ \hline
+Messages Dropped & 1122 & 2324 & 3079 & 3976 & 4728 \\ \hline
+Messages Delivered & 0 & 35 & 100 & 122 & 121 \\ \hline
+Delivery Probability & 0\% & 14.4\% & 41.2\% & 50.2\% & 49.8\% \\ \hline
+Overheard Ratio & N/A & 76.2 & 40.5 & 43.4 & 49.9 \\ \hline
+Average Latency & N/A & 1592.8 & 1667.1 & 1536.2 & 1514.8 \\ \hline
+Median Hop Count & 0 & 2 & 2 & 2 & 2 \\ \hline
+\end{tabular}
+\end{center}
 
 \section{Conclusion}
 Conclusion
