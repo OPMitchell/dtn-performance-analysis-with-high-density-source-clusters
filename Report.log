@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.23)  10 DEC 2018 16:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.23)  10 DEC 2018 21:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -385,21 +385,121 @@ Package caption3 Info: TeX engine: e-TeX on input line 67.
 \caption@hangindent=\dimen117
 )
 \c@ContinuedFloat=\count90
-) (./Report.aux)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 95.
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count91
+))
+\Gin@req@height=\dimen118
+\Gin@req@width=\dimen119
+)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2016/02/20 v1.1-142 Sub-captions (AR)
+\c@subfigure=\count92
+\c@subtable=\count93
+) (./Report.aux
+
+LaTeX Warning: Label `fig:test1' multiply defined.
+
+
+LaTeX Warning: Label `fig:test2' multiply defined.
+
+
+LaTeX Warning: Label `fig:test1' multiply defined.
+
+
+LaTeX Warning: Label `fig:test2' multiply defined.
+
+
+LaTeX Warning: Label `fig:test1' multiply defined.
+
+
+LaTeX Warning: Label `fig:test2' multiply defined.
+
+
+LaTeX Warning: Label `fig:test1' multiply defined.
+
+
+LaTeX Warning: Label `fig:test2' multiply defined.
+
+
+LaTeX Warning: Label `fig:test1' multiply defined.
+
+
+LaTeX Warning: Label `fig:test2' multiply defined.
+
+
+LaTeX Warning: Label `fig:test1' multiply defined.
+
+
+LaTeX Warning: Label `fig:test2' multiply defined.
+
+
+LaTeX Warning: Label `fig:test1' multiply defined.
+
+
+LaTeX Warning: Label `fig:test2' multiply defined.
+
+
+LaTeX Warning: Label `fig:test1' multiply defined.
+
+
+LaTeX Warning: Label `fig:test2' multiply defined.
+
+
+LaTeX Warning: Label `fig:test1' multiply defined.
+
+
+LaTeX Warning: Label `fig:test2' multiply defined.
+
+
+LaTeX Warning: Label `fig:test1' multiply defined.
+
+
+LaTeX Warning: Label `fig:test2' multiply defined.
+
+
+LaTeX Warning: Label `fig:test1' multiply defined.
+
+
+LaTeX Warning: Label `fig:test2' multiply defined.
+
+)
 \openout1 = `Report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -437,12 +537,70 @@ LaTeX Font Info:    ... okay on input line 18.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count94
+\scratchdimen=\dimen120
+\scratchbox=\box26
+\nofMPsegments=\count95
+\nofMParguments=\count96
+\everyMPshowfont=\toks18
+\MPscratchCnt=\count97
+\MPscratchDim=\dimen121
+\MPnumerator=\count98
+\makeMPintoPDFobject=\count99
+\everyMPtoPDFconversion=\toks19
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 20.
+(Font)              <12> on input line 22.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 20.
+(Font)              <8> on input line 22.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 20.
+(Font)              <6> on input line 22.
+
 (./Report.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 3.
@@ -455,132 +613,532 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 26--29
+Underfull \hbox (badness 10000) in paragraph at lines 28--31
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 36.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 38.
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 36.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 38.
  [2]
-Underfull \hbox (badness 10000) in paragraph at lines 51--53
+Underfull \hbox (badness 10000) in paragraph at lines 53--55
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 61--63
+Underfull \hbox (badness 10000) in paragraph at lines 63--65
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--84
+Underfull \hbox (badness 10000) in paragraph at lines 78--86
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--84
+Underfull \hbox (badness 10000) in paragraph at lines 78--86
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--84
+Underfull \hbox (badness 10000) in paragraph at lines 78--86
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--84
+Underfull \hbox (badness 10000) in paragraph at lines 78--86
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--84
+Underfull \hbox (badness 10000) in paragraph at lines 78--86
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--84
+Underfull \hbox (badness 10000) in paragraph at lines 78--86
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--84
+Underfull \hbox (badness 10000) in paragraph at lines 78--86
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--84
+Underfull \hbox (badness 10000) in paragraph at lines 78--86
 
  []
 
 [4] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 87--90
+Underfull \hbox (badness 10000) in paragraph at lines 89--92
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--104
+Underfull \hbox (badness 10000) in paragraph at lines 107--108
 
  []
 
-[6] [7] [8] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 305--308
+[6] [7] [8]
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(92.14519pt, 430.00462pt, 92.14519pt)
+* v-part:(T,H,B)=(28.45274pt, 671.11987pt, 95.39737pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=430.00462pt
+* \textheight=671.11987pt
+* \oddsidemargin=19.8752pt
+* \evensidemargin=19.8752pt
+* \topmargin=-80.81725pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
+<Results/Graphs/DeliveryProbability/S1_DeliveryProbability_SprayAndWaitComparis
+on.png, id=36, 319.1925pt x 228.25275pt>
+File: Results/Graphs/DeliveryProbability/S1_DeliveryProbability_SprayAndWaitCom
+parison.png Graphic file (type png)
+
+<use Results/Graphs/DeliveryProbability/S1_DeliveryProbability_SprayAndWaitComp
+arison.png>
+Package pdftex.def Info: Results/Graphs/DeliveryProbability/S1_DeliveryProbabil
+ity_SprayAndWaitComparison.png used on input line 194.
+(pdftex.def)             Requested size: 210.70132pt x 150.67165pt.
+
+<Results/Graphs/DeliveryProbability/S1_DeliveryProbability_AllComparison.png, i
+d=37, 319.1925pt x 228.25275pt>
+File: Results/Graphs/DeliveryProbability/S1_DeliveryProbability_AllComparison.p
+ng Graphic file (type png)
+
+<use Results/Graphs/DeliveryProbability/S1_DeliveryProbability_AllComparison.pn
+g>
+Package pdftex.def Info: Results/Graphs/DeliveryProbability/S1_DeliveryProbabil
+ity_AllComparison.png used on input line 200.
+(pdftex.def)             Requested size: 210.70132pt x 150.67165pt.
+
+<Results/Graphs/AverageLatency/S1_AverageLatency_SprayAndWaitComparison.png, id
+=38, 319.1925pt x 228.25275pt>
+File: Results/Graphs/AverageLatency/S1_AverageLatency_SprayAndWaitComparison.pn
+g Graphic file (type png)
+
+<use Results/Graphs/AverageLatency/S1_AverageLatency_SprayAndWaitComparison.png
+>
+Package pdftex.def Info: Results/Graphs/AverageLatency/S1_AverageLatency_SprayA
+ndWaitComparison.png used on input line 208.
+(pdftex.def)             Requested size: 210.70132pt x 150.67165pt.
+
+<Results/Graphs/AverageLatency/S1_AverageLatency_AllComparison.png, id=39, 319.
+1925pt x 228.25275pt>
+File: Results/Graphs/AverageLatency/S1_AverageLatency_AllComparison.png Graphic
+ file (type png)
+
+<use Results/Graphs/AverageLatency/S1_AverageLatency_AllComparison.png>
+Package pdftex.def Info: Results/Graphs/AverageLatency/S1_AverageLatency_AllCom
+parison.png used on input line 214.
+(pdftex.def)             Requested size: 210.70132pt x 150.67165pt.
+
+<Results/Graphs/OverheadRatio/S1_OverheadRatio_SprayAndWaitComparison.png, id=4
+0, 319.1925pt x 228.25275pt>
+File: Results/Graphs/OverheadRatio/S1_OverheadRatio_SprayAndWaitComparison.png 
+Graphic file (type png)
+
+<use Results/Graphs/OverheadRatio/S1_OverheadRatio_SprayAndWaitComparison.png>
+Package pdftex.def Info: Results/Graphs/OverheadRatio/S1_OverheadRatio_SprayAnd
+WaitComparison.png used on input line 222.
+(pdftex.def)             Requested size: 210.70132pt x 150.67165pt.
+
+<Results/Graphs/OverheadRatio/S1_OverheadRatio_AllComparison.png, id=41, 319.19
+25pt x 228.25275pt>
+File: Results/Graphs/OverheadRatio/S1_OverheadRatio_AllComparison.png Graphic f
+ile (type png)
+
+<use Results/Graphs/OverheadRatio/S1_OverheadRatio_AllComparison.png>
+Package pdftex.def Info: Results/Graphs/OverheadRatio/S1_OverheadRatio_AllCompa
+rison.png used on input line 228.
+(pdftex.def)             Requested size: 210.70132pt x 150.67165pt.
+
+<Results/Graphs/MessagesDropped/S1_MessagesDropped_SprayAndWaitComparison.png, 
+id=42, 319.1925pt x 228.25275pt>
+File: Results/Graphs/MessagesDropped/S1_MessagesDropped_SprayAndWaitComparison.
+png Graphic file (type png)
+
+<use Results/Graphs/MessagesDropped/S1_MessagesDropped_SprayAndWaitComparison.p
+ng>
+Package pdftex.def Info: Results/Graphs/MessagesDropped/S1_MessagesDropped_Spra
+yAndWaitComparison.png used on input line 236.
+(pdftex.def)             Requested size: 210.70132pt x 150.67165pt.
+
+<Results/Graphs/MessagesDropped/S1_MessagesDropped_AllComparison.png, id=43, 31
+9.1925pt x 228.25275pt>
+File: Results/Graphs/MessagesDropped/S1_MessagesDropped_AllComparison.png Graph
+ic file (type png)
+
+<use Results/Graphs/MessagesDropped/S1_MessagesDropped_AllComparison.png>
+Package pdftex.def Info: Results/Graphs/MessagesDropped/S1_MessagesDropped_AllC
+omparison.png used on input line 242.
+(pdftex.def)             Requested size: 210.70132pt x 150.67165pt.
+
+
+LaTeX Warning: Float too large for page by 79.06665pt on input line 247.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[9 <./Results/Graphs/DeliveryProbability/S1_DeliveryProbability_SprayAndWaitCom
+parison.png> <./Results/Graphs/DeliveryProbability/S1_DeliveryProbability_AllCo
+mparison.png> <./Results/Graphs/AverageLatency/S1_AverageLatency_SprayAndWaitCo
+mparison.png> <./Results/Graphs/AverageLatency/S1_AverageLatency_AllComparison.
+png> <./Results/Graphs/OverheadRatio/S1_OverheadRatio_SprayAndWaitComparison.pn
+g> <./Results/Graphs/OverheadRatio/S1_OverheadRatio_AllComparison.png> <./Resul
+ts/Graphs/MessagesDropped/S1_MessagesDropped_SprayAndWaitComparison.png> <./Res
+ults/Graphs/MessagesDropped/S1_MessagesDropped_AllComparison.png>] [10
+
+
+
+]
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(92.14519pt, 430.00462pt, 92.14519pt)
+* v-part:(T,H,B)=(28.45274pt, 671.11987pt, 95.39737pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=430.00462pt
+* \textheight=671.11987pt
+* \oddsidemargin=19.8752pt
+* \evensidemargin=19.8752pt
+* \topmargin=-80.81725pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
+<Results/Graphs/DeliveryProbability/S2_DeliveryProbability_SprayAndWaitComparis
+on.png, id=51, 319.1925pt x 228.25275pt>
+File: Results/Graphs/DeliveryProbability/S2_DeliveryProbability_SprayAndWaitCom
+parison.png Graphic file (type png)
+
+<use Results/Graphs/DeliveryProbability/S2_DeliveryProbability_SprayAndWaitComp
+arison.png>
+Package pdftex.def Info: Results/Graphs/DeliveryProbability/S2_DeliveryProbabil
+ity_SprayAndWaitComparison.png used on input line 313.
+(pdftex.def)             Requested size: 210.70132pt x 150.67165pt.
+
+<Results/Graphs/DeliveryProbability/S2_DeliveryProbability_AllComparison.png, i
+d=52, 319.1925pt x 228.25275pt>
+File: Results/Graphs/DeliveryProbability/S2_DeliveryProbability_AllComparison.p
+ng Graphic file (type png)
+
+<use Results/Graphs/DeliveryProbability/S2_DeliveryProbability_AllComparison.pn
+g>
+Package pdftex.def Info: Results/Graphs/DeliveryProbability/S2_DeliveryProbabil
+ity_AllComparison.png used on input line 319.
+(pdftex.def)             Requested size: 210.70132pt x 150.67165pt.
+
+<Results/Graphs/AverageLatency/S2_AverageLatency_SprayAndWaitComparison.png, id
+=53, 319.1925pt x 228.25275pt>
+File: Results/Graphs/AverageLatency/S2_AverageLatency_SprayAndWaitComparison.pn
+g Graphic file (type png)
+
+<use Results/Graphs/AverageLatency/S2_AverageLatency_SprayAndWaitComparison.png
+>
+Package pdftex.def Info: Results/Graphs/AverageLatency/S2_AverageLatency_SprayA
+ndWaitComparison.png used on input line 327.
+(pdftex.def)             Requested size: 210.70132pt x 150.67165pt.
+
+<Results/Graphs/AverageLatency/S2_AverageLatency_AllComparison.png, id=54, 319.
+1925pt x 228.25275pt>
+File: Results/Graphs/AverageLatency/S2_AverageLatency_AllComparison.png Graphic
+ file (type png)
+
+<use Results/Graphs/AverageLatency/S2_AverageLatency_AllComparison.png>
+Package pdftex.def Info: Results/Graphs/AverageLatency/S2_AverageLatency_AllCom
+parison.png used on input line 333.
+(pdftex.def)             Requested size: 210.70132pt x 150.67165pt.
+
+<Results/Graphs/OverheadRatio/S2_OverheadRatio_SprayAndWaitComparison.png, id=5
+5, 319.1925pt x 228.25275pt>
+File: Results/Graphs/OverheadRatio/S2_OverheadRatio_SprayAndWaitComparison.png 
+Graphic file (type png)
+
+<use Results/Graphs/OverheadRatio/S2_OverheadRatio_SprayAndWaitComparison.png>
+Package pdftex.def Info: Results/Graphs/OverheadRatio/S2_OverheadRatio_SprayAnd
+WaitComparison.png used on input line 341.
+(pdftex.def)             Requested size: 210.70132pt x 150.67165pt.
+
+<Results/Graphs/OverheadRatio/S2_OverheadRatio_AllComparison.png, id=56, 319.19
+25pt x 228.25275pt>
+File: Results/Graphs/OverheadRatio/S2_OverheadRatio_AllComparison.png Graphic f
+ile (type png)
+
+<use Results/Graphs/OverheadRatio/S2_OverheadRatio_AllComparison.png>
+Package pdftex.def Info: Results/Graphs/OverheadRatio/S2_OverheadRatio_AllCompa
+rison.png used on input line 347.
+(pdftex.def)             Requested size: 210.70132pt x 150.67165pt.
+
+<Results/Graphs/MessagesDropped/S2_MessagesDropped_SprayAndWaitComparison.png, 
+id=57, 319.1925pt x 228.25275pt>
+File: Results/Graphs/MessagesDropped/S2_MessagesDropped_SprayAndWaitComparison.
+png Graphic file (type png)
+
+<use Results/Graphs/MessagesDropped/S2_MessagesDropped_SprayAndWaitComparison.p
+ng>
+Package pdftex.def Info: Results/Graphs/MessagesDropped/S2_MessagesDropped_Spra
+yAndWaitComparison.png used on input line 355.
+(pdftex.def)             Requested size: 210.70132pt x 150.67165pt.
+
+<Results/Graphs/MessagesDropped/S2_MessagesDropped_AllComparison.png, id=58, 31
+9.1925pt x 228.25275pt>
+File: Results/Graphs/MessagesDropped/S2_MessagesDropped_AllComparison.png Graph
+ic file (type png)
+
+<use Results/Graphs/MessagesDropped/S2_MessagesDropped_AllComparison.png>
+Package pdftex.def Info: Results/Graphs/MessagesDropped/S2_MessagesDropped_AllC
+omparison.png used on input line 361.
+(pdftex.def)             Requested size: 210.70132pt x 150.67165pt.
+
+
+LaTeX Warning: Float too large for page by 79.06665pt on input line 366.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[11 <./Results/Graphs/DeliveryProbability/S2_DeliveryProbability_SprayAndWaitCo
+mparison.png> <./Results/Graphs/DeliveryProbability/S2_DeliveryProbability_AllC
+omparison.png> <./Results/Graphs/AverageLatency/S2_AverageLatency_SprayAndWaitC
+omparison.png> <./Results/Graphs/AverageLatency/S2_AverageLatency_AllComparison
+.png> <./Results/Graphs/OverheadRatio/S2_OverheadRatio_SprayAndWaitComparison.p
+ng> <./Results/Graphs/OverheadRatio/S2_OverheadRatio_AllComparison.png> <./Resu
+lts/Graphs/MessagesDropped/S2_MessagesDropped_SprayAndWaitComparison.png> <./Re
+sults/Graphs/MessagesDropped/S2_MessagesDropped_AllComparison.png>] [12
+
+
+
+]
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(92.14519pt, 430.00462pt, 92.14519pt)
+* v-part:(T,H,B)=(28.45274pt, 671.11987pt, 95.39737pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=430.00462pt
+* \textheight=671.11987pt
+* \oddsidemargin=19.8752pt
+* \evensidemargin=19.8752pt
+* \topmargin=-80.81725pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
+<Results/Graphs/DeliveryProbability/S3_DeliveryProbability_SprayAndWaitComparis
+on.png, id=65, 320.99925pt x 231.264pt>
+File: Results/Graphs/DeliveryProbability/S3_DeliveryProbability_SprayAndWaitCom
+parison.png Graphic file (type png)
+
+<use Results/Graphs/DeliveryProbability/S3_DeliveryProbability_SprayAndWaitComp
+arison.png>
+Package pdftex.def Info: Results/Graphs/DeliveryProbability/S3_DeliveryProbabil
+ity_SprayAndWaitComparison.png used on input line 432.
+(pdftex.def)             Requested size: 210.70132pt x 151.80544pt.
+
+<Results/Graphs/DeliveryProbability/S3_DeliveryProbability_AllComparison.png, i
+d=66, 320.99925pt x 231.86626pt>
+File: Results/Graphs/DeliveryProbability/S3_DeliveryProbability_AllComparison.p
+ng Graphic file (type png)
+
+<use Results/Graphs/DeliveryProbability/S3_DeliveryProbability_AllComparison.pn
+g>
+Package pdftex.def Info: Results/Graphs/DeliveryProbability/S3_DeliveryProbabil
+ity_AllComparison.png used on input line 438.
+(pdftex.def)             Requested size: 210.70132pt x 152.20076pt.
+
+<Results/Graphs/AverageLatency/S3_AverageLatency_SprayAndWaitComparison.png, id
+=67, 319.1925pt x 228.25275pt>
+File: Results/Graphs/AverageLatency/S3_AverageLatency_SprayAndWaitComparison.pn
+g Graphic file (type png)
+
+<use Results/Graphs/AverageLatency/S3_AverageLatency_SprayAndWaitComparison.png
+>
+Package pdftex.def Info: Results/Graphs/AverageLatency/S3_AverageLatency_SprayA
+ndWaitComparison.png used on input line 446.
+(pdftex.def)             Requested size: 210.70132pt x 150.67165pt.
+
+<Results/Graphs/AverageLatency/S3_AverageLatency_AllComparison.png, id=68, 319.
+1925pt x 228.25275pt>
+File: Results/Graphs/AverageLatency/S3_AverageLatency_AllComparison.png Graphic
+ file (type png)
+
+<use Results/Graphs/AverageLatency/S3_AverageLatency_AllComparison.png>
+Package pdftex.def Info: Results/Graphs/AverageLatency/S3_AverageLatency_AllCom
+parison.png used on input line 452.
+(pdftex.def)             Requested size: 210.70132pt x 150.67165pt.
+
+<Results/Graphs/OverheadRatio/S3_OverheadRatio_SprayAndWaitComparison.png, id=6
+9, 319.1925pt x 228.25275pt>
+File: Results/Graphs/OverheadRatio/S3_OverheadRatio_SprayAndWaitComparison.png 
+Graphic file (type png)
+
+<use Results/Graphs/OverheadRatio/S3_OverheadRatio_SprayAndWaitComparison.png>
+Package pdftex.def Info: Results/Graphs/OverheadRatio/S3_OverheadRatio_SprayAnd
+WaitComparison.png used on input line 460.
+(pdftex.def)             Requested size: 210.70132pt x 150.67165pt.
+
+<Results/Graphs/OverheadRatio/S3_OverheadRatio_AllComparison.png, id=70, 319.19
+25pt x 228.25275pt>
+File: Results/Graphs/OverheadRatio/S3_OverheadRatio_AllComparison.png Graphic f
+ile (type png)
+
+<use Results/Graphs/OverheadRatio/S3_OverheadRatio_AllComparison.png>
+Package pdftex.def Info: Results/Graphs/OverheadRatio/S3_OverheadRatio_AllCompa
+rison.png used on input line 466.
+(pdftex.def)             Requested size: 210.70132pt x 150.67165pt.
+
+<Results/Graphs/MessagesDropped/S3_MessagesDropped_SprayAndWaitComparison.png, 
+id=71, 319.1925pt x 228.25275pt>
+File: Results/Graphs/MessagesDropped/S3_MessagesDropped_SprayAndWaitComparison.
+png Graphic file (type png)
+
+<use Results/Graphs/MessagesDropped/S3_MessagesDropped_SprayAndWaitComparison.p
+ng>
+Package pdftex.def Info: Results/Graphs/MessagesDropped/S3_MessagesDropped_Spra
+yAndWaitComparison.png used on input line 474.
+(pdftex.def)             Requested size: 210.70132pt x 150.67165pt.
+
+<Results/Graphs/MessagesDropped/S3_MessagesDropped_AllComparison.png, id=72, 31
+9.1925pt x 228.25275pt>
+File: Results/Graphs/MessagesDropped/S3_MessagesDropped_AllComparison.png Graph
+ic file (type png)
+
+<use Results/Graphs/MessagesDropped/S3_MessagesDropped_AllComparison.png>
+Package pdftex.def Info: Results/Graphs/MessagesDropped/S3_MessagesDropped_AllC
+omparison.png used on input line 480.
+(pdftex.def)             Requested size: 210.70132pt x 150.67165pt.
+
+
+LaTeX Warning: Float too large for page by 80.59576pt on input line 485.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[13 <./Results/Graphs/DeliveryProbability/S3_DeliveryProbability_SprayAndWaitCo
+mparison.png> <./Results/Graphs/DeliveryProbability/S3_DeliveryProbability_AllC
+omparison.png> <./Results/Graphs/AverageLatency/S3_AverageLatency_SprayAndWaitC
+omparison.png> <./Results/Graphs/AverageLatency/S3_AverageLatency_AllComparison
+.png> <./Results/Graphs/OverheadRatio/S3_OverheadRatio_SprayAndWaitComparison.p
+ng> <./Results/Graphs/OverheadRatio/S3_OverheadRatio_AllComparison.png> <./Resu
+lts/Graphs/MessagesDropped/S3_MessagesDropped_SprayAndWaitComparison.png> <./Re
+sults/Graphs/MessagesDropped/S3_MessagesDropped_AllComparison.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 517--520
 []\OT1/cmr/m/n/10 Jackson, J. (2005). "The In-ter-plan-e-tary In-ter-net" \OT1/
 cmr/m/it/10 IEEE Spec-trum\OT1/cmr/m/n/10 . Avail-able at:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 305--308
+Underfull \hbox (badness 10000) in paragraph at lines 517--520
 \OT1/cmr/m/n/10 https://spectrum.ieee.org/telecom/internet/the-interplanetary-i
 nternet [Ac-cessed 24 Oct.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 358--359
+Underfull \hbox (badness 10000) in paragraph at lines 570--571
 []\OT1/cmr/m/n/10 The ONE (Op-por-tunis-tic Net-work En-vi-ron-ment Sim-u-la-to
 r). Avail-able at:
  []
 
-! Misplaced alignment tab character &.
-l.366 ...neering.com/technologies/?a=802.11-wi-fi&
-                                                  id=802.11p-automotive [Acc...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
+[14
 
 
-Overfull \hbox (54.22702pt too wide) in paragraph at lines 366--367
+
+]
+Overfull \hbox (54.22702pt too wide) in paragraph at lines 578--579
 []\OT1/cmr/m/n/10 CA En-gi-neer-ing - 802.11p Au-to-mo-tive. Avail-able at: htt
 ps://www.caengineering.com/technologies/?a=802.11-
  []
 
-[10] (./Report.aux) ) 
+[15] (./Report.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 2223 strings out of 493029
- 33459 string characters out of 6136233
- 116646 words of memory out of 5000000
- 5780 multiletter control sequences out of 15000+600000
+ 3610 strings out of 493029
+ 60722 string characters out of 6136233
+ 122950 words of memory out of 5000000
+ 7082 multiletter control sequences out of 15000+600000
  8769 words of font info for 31 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,8n,38p,1095b,238s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-bx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Report.pdf (10 pages, 156932 bytes).
+ 37i,8n,39p,1095b,391s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmtt12.pfb>
+Output written on Report.pdf (15 pages, 388059 bytes).
 PDF statistics:
- 73 PDF objects out of 1000 (max. 8388607)
- 51 compressed objects within 1 object stream
+ 117 PDF objects out of 1000 (max. 8388607)
+ 65 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 121 words of extra memory for PDF output out of 10000 (max. 10000000)
 

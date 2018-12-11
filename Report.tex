@@ -5,6 +5,8 @@
 \setlength{\droptitle}{-5em}   % This is your set screw
 \usepackage[margin=3.0cm]{geometry}
 \usepackage{caption}
+\usepackage{graphicx}
+\usepackage{subcaption}
  
 \title{Evaluating the Performance Characteristics of Opportunistic Routing Protocols during an Emergency Fire \& Rescue Scenario involving High-Density Clusters of Victims}
 \author{
@@ -97,7 +99,9 @@ This scenario has been created using the ONE simulator. However, three slightly 
 \textbf{3} & 20 trapped victims are simulated by a single node each. Each node moves randomly within a small pre-defined range and is able to create its own messages. (Figure 3). \\ \hline
 \end{tabular}
 \end{center}
-\noindent Each version of the scenario is considered twice (once for each protocol), for a total of 6 separate simulations.
+
+\subsection{Assumptions}
+Assumptions
 
 \subsection{Common Simulation Parameters}
 Some common settings have been selected for every scenario. All nodes utilise network interfaces which conform to the 802.11p standard [16]. This standard defines wireless access in vehicular environments (WAVE) and is used in the real world for vehicle-to-vehicle communication [16]. A range of 250 metres and a transfer rate of 10MB/s has been selected as a close representation of this standard, taking into consideration limitations such as obstructed signal strength in built-up urban areas. All messages in the simulation represent emergency information which is typically small in size (50-500KB) and uses a relatively short time-to-live (TTL) of 60 minutes. This short TLL ensures large amount of messages do not amass, congesting the network unnecessarily.\\
@@ -122,7 +126,11 @@ Talk about cluster movement here
 \subsubsection{Scenario 2}
 \subsubsection{Scenario 3}
 
+\newpage
 \section{Evaluation}
+\subsection{Evaluation Criteria Definitions}
+Definitions
+
 \subsection{Scenario 1}
 In this scenario, one trapped victim is simulated by a single node in the network that moves randomly within a small pre-defined range and creates its own messages.
 
@@ -173,6 +181,74 @@ Average Latency & 1718.7 & 1177.9 & 1235.4 & 1263.2 & 1278.1 \\ \hline
 Median Hop Count & 2 & 2 & 2 & 2 & 2\\ \hline
 \end{tabular}
 \end{center}
+
+\newgeometry{top=1cm}
+
+\begin{figure}[h!]
+
+\captionsetup{justification=centering, font=footnotesize}
+
+\centering
+\begin{minipage}[t]{.5\textwidth}
+  \centering
+  \includegraphics[width=.98\linewidth]{Results/Graphs/DeliveryProbability/S1_DeliveryProbability_SprayAndWaitComparison.png}
+  \captionof{figure}{Comparison of delivery probability between vanilla and binary spray-and-wait in scenario 1}
+  \label{fig:test1}
+\end{minipage}%
+\begin{minipage}[t]{.5\textwidth}
+  \centering
+  \includegraphics[width=.98\linewidth]{Results/Graphs/DeliveryProbability/S1_DeliveryProbability_AllComparison.png}
+  \captionof{figure}{Comparison of delivery probability across all protocols in scenario 1}
+  \label{fig:test2}
+\end{minipage}
+
+\centering
+\begin{minipage}[t]{.5\textwidth}
+  \centering
+  \includegraphics[width=.98\linewidth]{Results/Graphs/AverageLatency/S1_AverageLatency_SprayAndWaitComparison.png}
+  \captionof{figure}{Comparison of average latency between vanilla and binary spray-and-wait over various message copies in scenario 1}
+  \label{fig:test1}
+\end{minipage}%
+\begin{minipage}[t]{.5\textwidth}
+  \centering
+  \includegraphics[width=.98\linewidth]{Results/Graphs/AverageLatency/S1_AverageLatency_AllComparison.png}
+  \captionof{figure}{Comparison of average latency across all protocols in scenario 1}
+  \label{fig:test2}
+\end{minipage}
+
+\centering
+\begin{minipage}[t]{.5\textwidth}
+  \centering
+  \includegraphics[width=.98\linewidth]{Results/Graphs/OverheadRatio/S1_OverheadRatio_SprayAndWaitComparison.png}
+  \captionof{figure}{Comparison of overhead ratio between vanilla and binary spray-and-wait over various message copies in scenario 1}
+  \label{fig:test1}
+\end{minipage}%
+\begin{minipage}[t]{.5\textwidth}
+  \centering
+  \includegraphics[width=.98\linewidth]{Results/Graphs/OverheadRatio/S1_OverheadRatio_AllComparison.png}
+  \captionof{figure}{Comparison of overhead ratio across all protocols in scenario 1}
+  \label{fig:test2}
+\end{minipage}
+
+\centering
+\begin{minipage}[t]{.5\textwidth}
+  \centering
+  \includegraphics[width=.98\linewidth]{Results/Graphs/MessagesDropped/S1_MessagesDropped_SprayAndWaitComparison.png}
+  \captionof{figure}{Comparison of messages dropped between vanilla and binary spray-and-wait over various message copies in scenario 1}
+  \label{fig:test1}
+\end{minipage}%
+\begin{minipage}[t]{.5\textwidth}
+  \centering
+  \includegraphics[width=.98\linewidth]{Results/Graphs/MessagesDropped/S1_MessagesDropped_AllComparison.png}
+  \captionof{figure}{Comparison of messages dropped across all protocols in scenario 1}
+  \label{fig:test2}
+\end{minipage}
+
+\end{figure}
+
+\restoregeometry
+
+\clearpage
 
 \subsection{Scenario 2}
 In this scenario, 10 trapped victims are simulated by a single node each. Each node moves randomly within a small pre-defined range and is able to create its own messages.
@@ -225,6 +301,74 @@ Median Hop Count & 0 & 2 & 2 & 2 & 2 \\ \hline
 \end{tabular}
 \end{center}
 
+\newgeometry{top=1cm}
+
+\begin{figure}[h!]
+
+\captionsetup{justification=centering, font=footnotesize}
+
+\centering
+\begin{minipage}[t]{.5\textwidth}
+  \centering
+  \includegraphics[width=.98\linewidth]{Results/Graphs/DeliveryProbability/S2_DeliveryProbability_SprayAndWaitComparison.png}
+  \captionof{figure}{Comparison of delivery probability between vanilla and binary spray-and-wait in scenario 2}
+  \label{fig:test1}
+\end{minipage}%
+\begin{minipage}[t]{.5\textwidth}
+  \centering
+  \includegraphics[width=.98\linewidth]{Results/Graphs/DeliveryProbability/S2_DeliveryProbability_AllComparison.png}
+  \captionof{figure}{Comparison of delivery probability across all protocols in scenario 2}
+  \label{fig:test2}
+\end{minipage}
+
+\centering
+\begin{minipage}[t]{.5\textwidth}
+  \centering
+  \includegraphics[width=.98\linewidth]{Results/Graphs/AverageLatency/S2_AverageLatency_SprayAndWaitComparison.png}
+  \captionof{figure}{Comparison of average latency between vanilla and binary spray-and-wait over various message copies in scenario 2}
+  \label{fig:test1}
+\end{minipage}%
+\begin{minipage}[t]{.5\textwidth}
+  \centering
+  \includegraphics[width=.98\linewidth]{Results/Graphs/AverageLatency/S2_AverageLatency_AllComparison.png}
+  \captionof{figure}{Comparison of average latency across all protocols in scenario 2}
+  \label{fig:test2}
+\end{minipage}
+
+\centering
+\begin{minipage}[t]{.5\textwidth}
+  \centering
+  \includegraphics[width=.98\linewidth]{Results/Graphs/OverheadRatio/S2_OverheadRatio_SprayAndWaitComparison.png}
+  \captionof{figure}{Comparison of overhead ratio between vanilla and binary spray-and-wait over various message copies in scenario 2}
+  \label{fig:test1}
+\end{minipage}%
+\begin{minipage}[t]{.5\textwidth}
+  \centering
+  \includegraphics[width=.98\linewidth]{Results/Graphs/OverheadRatio/S2_OverheadRatio_AllComparison.png}
+  \captionof{figure}{Comparison of overhead ratio across all protocols in scenario 2}
+  \label{fig:test2}
+\end{minipage}
+
+\centering
+\begin{minipage}[t]{.5\textwidth}
+  \centering
+  \includegraphics[width=.98\linewidth]{Results/Graphs/MessagesDropped/S2_MessagesDropped_SprayAndWaitComparison.png}
+  \captionof{figure}{Comparison of messages dropped between vanilla and binary spray-and-wait over various message copies in scenario 2}
+  \label{fig:test1}
+\end{minipage}%
+\begin{minipage}[t]{.5\textwidth}
+  \centering
+  \includegraphics[width=.98\linewidth]{Results/Graphs/MessagesDropped/S2_MessagesDropped_AllComparison.png}
+  \captionof{figure}{Comparison of messages dropped across all protocols in scenario 2}
+  \label{fig:test2}
+\end{minipage}
+
+\end{figure}
+
+\restoregeometry
+
+\clearpage
+
 \subsection{Scenario 3}
 In this scenario, 20 trapped victims are simulated by a single node each. Each node moves randomly within a small pre-defined range and is able to create its own messages.
 
@@ -275,6 +419,74 @@ Average Latency & 1834.4 & 1660.8 & 1482.6 & 1491.6 & 1544.6 \\ \hline
 Median Hop Count & 2 & 2 & 2 & 2 & 2 \\ \hline
 \end{tabular}
 \end{center}
+
+\newgeometry{top=1cm}
+
+\begin{figure}[h!]
+
+\captionsetup{justification=centering, font=footnotesize}
+
+\centering
+\begin{minipage}[t]{.5\textwidth}
+  \centering
+  \includegraphics[width=.98\linewidth]{Results/Graphs/DeliveryProbability/S3_DeliveryProbability_SprayAndWaitComparison.png}
+  \captionof{figure}{Comparison of delivery probability between vanilla and binary spray-and-wait in scenario 3}
+  \label{fig:test1}
+\end{minipage}%
+\begin{minipage}[t]{.5\textwidth}
+  \centering
+  \includegraphics[width=.98\linewidth]{Results/Graphs/DeliveryProbability/S3_DeliveryProbability_AllComparison.png}
+  \captionof{figure}{Comparison of delivery probability across all protocols in scenario 3}
+  \label{fig:test2}
+\end{minipage}
+
+\centering
+\begin{minipage}[t]{.5\textwidth}
+  \centering
+  \includegraphics[width=.98\linewidth]{Results/Graphs/AverageLatency/S3_AverageLatency_SprayAndWaitComparison.png}
+  \captionof{figure}{Comparison of average latency between vanilla and binary spray-and-wait over various message copies in scenario 3}
+  \label{fig:test1}
+\end{minipage}%
+\begin{minipage}[t]{.5\textwidth}
+  \centering
+  \includegraphics[width=.98\linewidth]{Results/Graphs/AverageLatency/S3_AverageLatency_AllComparison.png}
+  \captionof{figure}{Comparison of average latency across all protocols in scenario 3}
+  \label{fig:test2}
+\end{minipage}
+
+\centering
+\begin{minipage}[t]{.5\textwidth}
+  \centering
+  \includegraphics[width=.98\linewidth]{Results/Graphs/OverheadRatio/S3_OverheadRatio_SprayAndWaitComparison.png}
+  \captionof{figure}{Comparison of overhead ratio between vanilla and binary spray-and-wait over various message copies in scenario 3}
+  \label{fig:test1}
+\end{minipage}%
+\begin{minipage}[t]{.5\textwidth}
+  \centering
+  \includegraphics[width=.98\linewidth]{Results/Graphs/OverheadRatio/S3_OverheadRatio_AllComparison.png}
+  \captionof{figure}{Comparison of overhead ratio across all protocols in scenario 3}
+  \label{fig:test2}
+\end{minipage}
+
+\centering
+\begin{minipage}[t]{.5\textwidth}
+  \centering
+  \includegraphics[width=.98\linewidth]{Results/Graphs/MessagesDropped/S3_MessagesDropped_SprayAndWaitComparison.png}
+  \captionof{figure}{Comparison of messages dropped between vanilla and binary spray-and-wait over various message copies in scenario 3}
+  \label{fig:test1}
+\end{minipage}%
+\begin{minipage}[t]{.5\textwidth}
+  \centering
+  \includegraphics[width=.98\linewidth]{Results/Graphs/MessagesDropped/S3_MessagesDropped_AllComparison.png}
+  \captionof{figure}{Comparison of messages dropped across all protocols in scenario 3}
+  \label{fig:test2}
+\end{minipage}
+
+\end{figure}
+
+\restoregeometry
+
+\clearpage
 
 \section{Conclusion}
 Conclusion
@@ -363,7 +575,7 @@ Jiang, D. \& Delgrossi, L. (2008)
 \textit{In: Vehicular Technology Conference, 2008. VTC Spring 2008. IEEE}, pp 2036-2040.
 
 \bibitem{WAVE}
-CA Engineering - 802.11p Automotive. Available at: https://www.caengineering.com/technologies/?a=802.11-wi-fi&id=802.11p-automotive [Accessed 9th Dec. 2018]
+CA Engineering - 802.11p Automotive. Available at: https://www.caengineering.com/technologies/?a=802.11-wi-fi\&id=802.11p-automotive [Accessed 9th Dec. 2018]
 
 \end{thebibliography}
  
