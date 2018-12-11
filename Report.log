@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.23)  11 DEC 2018 19:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.23)  11 DEC 2018 20:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1253,21 +1253,18 @@ omparison.png> <./Results/Graphs/AverageLatency/S3_AverageLatency_AllComparison
 ng> <./Results/Graphs/OverheadRatio/S3_OverheadRatio_AllComparison.png> <./Resu
 lts/Graphs/MessagesDropped/S3_MessagesDropped_SprayAndWaitComparison.png> <./Re
 sults/Graphs/MessagesDropped/S3_MessagesDropped_AllComparison.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 670--673
-[]\OT1/cmr/m/n/10 Jackson, J. (2005). "The In-ter-plan-e-tary In-ter-net" \OT1/
-cmr/m/it/10 IEEE Spec-trum\OT1/cmr/m/n/10 . Avail-able at:
+Underfull \hbox (badness 10000) in paragraph at lines 645--649
+
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 670--673
-\OT1/cmr/m/n/10 https://spectrum.ieee.org/telecom/internet/the-interplanetary-i
-nternet [Ac-cessed 24 Oct.
+Underfull \hbox (badness 10000) in paragraph at lines 645--649
+
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 723--724
-[]\OT1/cmr/m/n/10 The ONE (Op-por-tunis-tic Net-work En-vi-ron-ment Sim-u-la-to
-r). Avail-able at:
+Underfull \hbox (badness 10000) in paragraph at lines 645--649
+
  []
 
 [19
@@ -1275,7 +1272,25 @@ r). Avail-able at:
 
 
 ]
-Overfull \hbox (54.22702pt too wide) in paragraph at lines 731--732
+Underfull \hbox (badness 10000) in paragraph at lines 673--676
+[]\OT1/cmr/m/n/10 Jackson, J. (2005). "The In-ter-plan-e-tary In-ter-net" \OT1/
+cmr/m/it/10 IEEE Spec-trum\OT1/cmr/m/n/10 . Avail-able at:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 673--676
+\OT1/cmr/m/n/10 https://spectrum.ieee.org/telecom/internet/the-interplanetary-i
+nternet [Ac-cessed 24 Oct.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 726--727
+[]\OT1/cmr/m/n/10 The ONE (Op-por-tunis-tic Net-work En-vi-ron-ment Sim-u-la-to
+r). Avail-able at:
+ []
+
+
+Overfull \hbox (54.22702pt too wide) in paragraph at lines 734--735
 []\OT1/cmr/m/n/10 CA En-gi-neer-ing - 802.11p Au-to-mo-tive. Avail-able at: htt
 ps://www.caengineering.com/technologies/?a=802.11-
  []
@@ -1305,7 +1320,7 @@ msfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.
 pfb>
-Output written on Report.pdf (20 pages, 572828 bytes).
+Output written on Report.pdf (20 pages, 574999 bytes).
 PDF statistics:
  154 PDF objects out of 1000 (max. 8388607)
  83 compressed objects within 1 object stream
