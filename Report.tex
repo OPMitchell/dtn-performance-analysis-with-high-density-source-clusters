@@ -140,7 +140,7 @@ The ONE (Opportunistic Network Environment) Simulator [14][15] is a DTN simulato
 \begin{figure}[h!]
 \captionsetup{justification=centering, font=footnotesize}
 \centering
-  \includegraphics[width=.75\linewidth]{Screenshots/ONEGUI.png}
+  \includegraphics[width=.6\linewidth]{Screenshots/ONEGUI.png}
   \captionof{figure}{Screenshot of the ONE simulator GUI}
   \label{fig:test1}
 \end{figure}
@@ -155,11 +155,12 @@ The aim of this paper is to evaluate the performance characteristics of the Epid
 This scenario has been created using the ONE simulator. However, three slightly different versions of the scenario will each be simulated to evaluate how both routing protocols perform. In each scenario the number of trapped victims (and therefore the density of the message source node cluster) is increased. This experiment was designed to to simulate a victim's likely response in such a chaotic scenario: contacting and finding their friends and family who are trapped in the building with them first. Accordingly, messages are likely to be first sent to other victims trapped in the museum before reaching passing vehicles outside.
 
 \begin{center}
+\vspace{6px}
 \begin{tabular}{|l|p{13cm}|}
 \hline
 \textbf{Scenario} & \textbf{Description} \\ \hline
-\textbf{1} & One trapped victim is simulated by a single node in the network that moves randomly within a small pre-defined range and creates its own messages (Figure 1). \\ \hline
-\textbf{2} & 10 trapped victims are simulated by a single node each. Each node moves randomly within a small pre-defined range and is able to create its own messages (Figure 2). \\ \hline
+\textbf{1} & One trapped victim is simulated by a single node in the network that moves randomly within a small pre-defined range and creates its own messages (Figure 6). \\ \hline
+\textbf{2} & 10 trapped victims are simulated by a single node each. Each node moves randomly within a small pre-defined range and is able to create its own messages (Figure 7). \\ \hline
 \textbf{3} & 20 trapped victims are simulated by a single node each. Each node moves randomly within a small pre-defined range and is able to create its own messages. \\ \hline
 \end{tabular}
 \end{center}
@@ -210,10 +211,9 @@ Buffer Size & 10MB \\ \hline
 \end{tabular}
 \end{center}
 
-\subsection{A Note on Cluster Movement}
+\subsection{Cluster Movement}
 To model the trapped victims' movement, the \texttt{movement/ClusterMovement} class was edited. Inside the class, the starting position of node groups using clustered movement was set to the location of the Helsinki museum of contemporary art. Additionally, the range variable was reduced. The node group for the victims uses this edited \texttt{ClusterMovement} class to mimic random movement within a confined space.
 
-\newpage
 \section{Evaluation}
 \subsection{Evaluation Criteria Definitions}
 The following is a list of the criteria that each routing protocol has been evaluated against:
@@ -236,10 +236,14 @@ Median Hop Count & The median average number of hops taken for a message to trav
 \subsection{Process of Evaluation}
 In each of the 3 scenarios, 3 routing protocols (epidemic, vanilla spray-and-wait and binary spray-and-wait) were tested. Epidemic was tested once for each scenario. Both spray-and-wait versions were tested 5 times each per scenario. For each test, the number of message copies to disseminate was changed with the goal of finding the optimal number of copies. For scenario 2 (cluster of 10 source nodes) the number of copies ranged from 6-30. For scenario 3 (cluster of 20 source nodes) the number of copies ranged from 12-60. These quantities ensured that the difference between the number of message copies and the number of source nodes was proportional across both scenarios.
 
+\newpage
+
 \subsection{Scenario 1}
 In this scenario, one trapped victim is simulated by a single node in the network that moves randomly within a small pre-defined range and creates its own messages.
 
 \begin{center}
+\captionof{table}{Performance data for the epidemic routing protocol in scenario 1}
+\vspace{6px}
 \begin{tabular}{|r|c|}
 \hline
 \textbf{Parameter} & \textbf{Epidemic} \\ \hline
@@ -256,6 +260,8 @@ Median Hop Count & 6 \\ \hline
 \end{center}
 
 \begin{center}
+\captionof{table}{Performance data for the binary spray-and-wait routing protocol in scenario 1 using different values for the message copy limit}
+\vspace{6px}
 \begin{tabular}{|r|c|c|c|c|c|}
 \hline
 \textbf{Parameter} & \textbf{SWB6} & \textbf{SWB12} & \textbf{SWB18} & \textbf{SWB24} & \textbf{SWB30} \\ \hline
@@ -272,6 +278,8 @@ Median Hop Count & 3 & 4 & 4 & 4 & 4\\ \hline
 \end{center}
 
 \begin{center}
+\captionof{table}{Performance data for the vanilla spray-and-wait routing protocol in scenario 1 using different values for the message copy limit}
+\vspace{6px}
 \begin{tabular}{|r|c|c|c|c|c|}
 \hline
 \textbf{Parameter} & \textbf{SWV6} & \textbf{SWV12} & \textbf{SWV18} & \textbf{SWV24} & \textbf{SWV30} \\ \hline
@@ -287,12 +295,13 @@ Median Hop Count & 2 & 2 & 2 & 2 & 2\\ \hline
 \end{tabular}
 \end{center}
 
-\vspace{16px}
+\newpage
+
 \noindent Scenario 1 was designed to act as a point of reference for the other scenarios. To accurately measure the effect of high-density source clusters on the performance of opportunistic routing protocols, it was first necessary to gauge how they perform with a single source node and then compare the results.\\
-\newline Epidemic performed relatively poorly when compared to both versions of the spray-and-wait protocol, achieving a delivery probability of only 40.7\% compared to both vanilla and binary spray-and-wait's maximum of 68.3\% when using 30 message copies. Additionally, epidemic started a far greater number of message transfers and, as a result, dropped far more messages than both vanilla and binary spray-and-wait combined (53841 for epidemic, 4438 for binary spray-and-wait with 30 message copies, and 2780 for vanilla spray-and-wait with 30 message copies). This is likely the result of both the messages' relatively short TTL and the fact that each node's buffer fills far quicker due to the sheer quantity of replicated messages in the network, leaving them unable to accept new copies and dropping them. The high amount of relayed messages compared to the low delivery rate also created significant overhead for the epidemic routing protocol; nearly 10 times greater than that of the greatest overhead produced by binary spray-and-wait (574.5 for epidemic and 38.6 for binary spray-and-wait with 30 message copies). Interestingly, epidemic performed worse in all but one of the evaluation criteria; achieving an average latency of 786.4 whilst all the spray-and-wait simulations failed to reach a latency lower than 1000. This is likely a singular benefit of epidemic's uncontrolled replicative behaviour: messages are disseminated far quicker because nodes are guaranteed to transfer all previously unseen messages on contact. It is highly likely that increasing the buffer size of each node would allow epidemic to perform significantly better. However, in this scenario, it is easy to rule out epidemic as inferior to both versions of the spray-and-wait protocol.\\
-\newline Out of the 2 spray-and-wait routing protocols, with low number of message copies, vanilla consistently achieved the highest delivery probability when there was only one source node in the cluster. However, when reaching 24 or greater message copies, the difference in the delivery probability of both protocols narrows, ultimately becoming the same at 30 copies (68.3\%). It is interesting to note that, with a greater number of message copies, comes increasingly diminished returns; the increase in delivery probability per extra copy becomes negligable. At their optimum (30 message copies) both protocols deliver 166 messages but binary spray-and-wait starts 76\% more message transfers leading to 60\% more dropped messages. This also leads to a greater overheard ratio (38.6 for binary and 21.5 for vanilla).\\
-\newline Evaluating both the number of dropped messages and overhead ratio for the protocols shows that binary increases at an almost linear rate as the number of message copies increases. Vanilla begins in a similar fashion (see messages dropped graph) but tapers off, eventually levelling out. Binary spray-and-wait is known to spread messages farther away from the source node at a faster rate than vanilla. The continued near-linear growth of binary's dropped messages and overhead could be a result of its success at encountering previously unseen nodes further away from the source cluster. Conversely, because vanilla fails to quickly reach as far out as binary does, it's overhead ratio levels out because it fails to find distant nodes that do not already have a message copy.\\
-\newline Though both spray-and-wait protocols deliver the same amount of messages, it could be argued that vanilla outperforms binary due to a fewer number of message drops, relays, and therefore reduced overhead.
+\newline Epidemic performed relatively poorly when compared to both versions of the spray-and-wait protocol, achieving a delivery probability of only 40.7\% compared to both vanilla and binary spray-and-wait's maximum of 68.3\% when using 30 message copies (Figure 9). Additionally, epidemic started a far greater number of message transfers and, as a result, dropped far more messages than both vanilla and binary spray-and-wait combined (53841 for epidemic, 4438 for binary spray-and-wait with 30 message copies, and 2780 for vanilla spray-and-wait with 30 message copies) (Figure 15). This is likely the result of both the messages' relatively short TTL and the fact that each node's buffer fills far quicker due to the sheer quantity of replicated messages in the network, leaving them unable to accept new copies and dropping them. The high amount of relayed messages compared to the low delivery rate also created significant overhead for the epidemic routing protocol; nearly 10 times greater than that of the greatest overhead produced by binary spray-and-wait (574.5 for epidemic and 38.6 for binary spray-and-wait with 30 message copies) (Figure 13). Interestingly, epidemic performed worse in all but one of the evaluation criteria; achieving an average latency of 786.4 whilst all the spray-and-wait simulations failed to reach a latency lower than 1000 (Figure 11). This is likely a singular benefit of epidemic's uncontrolled replicative behaviour: messages are disseminated far quicker because nodes are guaranteed to transfer all previously unseen messages on contact. It is highly likely that increasing the buffer size of each node would allow epidemic to perform significantly better. However, in this scenario, it is easy to rule out epidemic as inferior to both versions of the spray-and-wait protocol.\\
+\newline Out of the 2 spray-and-wait routing protocols, with low number of message copies, vanilla consistently achieved the highest delivery probability when there was only one source node in the cluster (Figure 8). However, when reaching 24 or greater message copies, the difference in the delivery probability of both protocols narrows, ultimately becoming the same at 30 copies (68.3\%). It is interesting to note that, with a greater number of message copies, comes increasingly diminished returns; the increase in delivery probability per extra copy becomes negligable. At their optimum (30 message copies) both protocols deliver 166 messages but binary spray-and-wait starts 76\% more message transfers leading to 60\% more dropped messages (Figure 14). This also leads to a greater overheard ratio (38.6 for binary and 21.5 for vanilla) (Figure 12).\\
+\newline Evaluating both the number of dropped messages and overhead ratio for the protocols shows that binary increases at an almost linear rate as the number of message copies increases. Vanilla begins in a similar fashion (see messages dropped graph) but tapers off, eventually levelling out (Figure 12 and Figure 14). Binary spray-and-wait is known to spread messages farther away from the source node at a faster rate than vanilla. The continued near-linear growth of binary's dropped messages and overhead could be a result of its success at encountering previously unseen nodes further away from the source cluster. Conversely, because vanilla fails to quickly reach as far out as binary does, it's overhead ratio levels out because it fails to find distant nodes that do not already have a message copy.\\
+\newline Though both spray-and-wait protocols deliver the same amount of messages when using a limit of 30 message copies, it could be argued that vanilla outperforms binary due to a fewer number of message drops, relays, and therefore reduced overhead.
 
 \newgeometry{top=1cm}
 
@@ -366,6 +375,8 @@ Median Hop Count & 2 & 2 & 2 & 2 & 2\\ \hline
 In this scenario, 10 trapped victims are simulated by a single node each. Each node moves randomly within a small pre-defined range and is able to create its own messages.
 
 \begin{center}
+\captionof{table}{Performance data for the epidemic routing protocol in scenario 2}
+\vspace{6px}
 \begin{tabular}{|r|c|}
 \hline
 \textbf{Parameter} & \textbf{Epidemic} \\ \hline
@@ -382,6 +393,8 @@ Median Hop Count & 16 \\ \hline
 \end{center}
 
 \begin{center}
+\captionof{table}{Performance data for the binary spray-and-wait routing protocol in scenario 2 using different values for the message copy limit}
+\vspace{6px}
 \begin{tabular}{|r|c|c|c|c|c|}
 \hline
 \textbf{Parameter} & \textbf{SWB6} & \textbf{SWB12} & \textbf{SWB18} & \textbf{SWB24} & \textbf{SWB30} \\ \hline
@@ -398,6 +411,8 @@ Median Hop Count & 0 & 4 & 4 & 4 & 4 \\ \hline
 \end{center}
 
 \begin{center}
+\captionof{table}{Performance data for the vanilla spray-and-wait routing protocol in scenario 2 using different values for the message copy limit}
+\vspace{6px}
 \begin{tabular}{|r|c|c|c|c|c|}
 \hline
 \textbf{Parameter} & \textbf{SWV6} & \textbf{SWV12} & \textbf{SWV18} & \textbf{SWV24} & \textbf{SWV30} \\ \hline
@@ -413,12 +428,13 @@ Median Hop Count & 0 & 2 & 2 & 2 & 2 \\ \hline
 \end{tabular}
 \end{center}
 
-\vspace{16px}
+\newpage
+
 \noindent Scenario 2 increased the number of source nodes in the cluster from 1 to 10. The aim of this simulation was to compare the effectiveness of all 3 protocols when messages are created by a high-density cluster of source nodes rather than a single node. The simulation was designed to mimic real-life scenarios which involve large amounts of active mobile devices in close proximity to each other in an enclosed space.\\
-\newline With the addition of the extra source nodes, epidemic's delivery probability fell from 40.7\%, seen in scenario 1, to 37.5\%, delivering only 91 messages. Additionally, epidemic's hop count increased from 6 to 16, the overhead ratio increased by 500\% (574.5 to 3619.8) and the number of dropped messages exceeded 300,000. It is clear from this data that high-density clusters of source nodes lead to exponential growth in the number of message transfers that the epidemic protocol attempts to create, leading to completely unmanagable levels of overhead and considerably poorer performance. Epidemic is not a suitable routing protocol in scenarios which involve high-density source node clusters.\\
-\newline All 5 simulations for both vanilla and binary spray-and-wait started with 6 message copies and increased the amount by 6 each time, finally reaching a total of 30 message copies. Interestingly, when using just 6 message copies both versions of spray-and-wait engaged in the exact same number of message transfers (1215) but achieved 0 message deliveries. On closer inspection it was discovered that no messages were able to leave the confines of the source node cluster. The cause was clear: the message copy limit had been reached simply by transferring created messages to the other source nodes contained in the cluster. For messages to reach nodes outside of the cluster, the number of spray-and-wait message copies should exceed the number of source nodes in the cluster. This was proven true by the next simulation which increased the number of message copies to 12:\\
-\newline In scenario 1, both versions of spray-and-wait achieved a delivery probability of more than 50\% with 12 message copies. However, with a cluster of 10 source nodes, the protocols only managed 18.5\% (binary) and 14.4\% (vanilla). However, increasing the number of message copies in later simulations saw the delivery probability for binary spray-and-wait reach comparable levels of the delivery probability seen in scenario 1, even exceeding them when using 24 and 30 message copies. The highest delivery probability achieved by binary was 69.6\% with 30 message copies (compared to 68.3\% with 30 message copies seen in scenario 1). Vanilla on the other hand reached a maximum delivery probability of only 50.2\% with 24 message copies (compared to 60.3\% with 30 message copies in scenario 1) and actually worsens with 30 message copies, producing only 49.8\%.\\
-\newline In Scenario 1, the two spray-and-wait versions achieved similar performance, yet vanilla only slightly outperformed binary. However, in scenario 2, it is clear that binary performed considerably better than vanilla. It achieved a higher delivery probability, lower overhead ratio and lower average latency. Performing at its best (30 message copies) binary achieved an overhead ratio of 40.1 which is only 4\% greater than its overhead ratio of 30.6 achieved in scenario 1. Additionally, the average latency of 1316.6 is 19\% greater than the latency of 1102 achieved in scenario 1. The median hop count doubled from 2 to 4 which may be the cause of the increased latency.\\
+\newline With the addition of the extra source nodes, epidemic's delivery probability fell from 40.7\%, seen in scenario 1, to 37.5\%, delivering only 91 messages (Figure 17). Additionally, epidemic's hop count increased from 6 to 16 (Table 4), the overhead ratio increased by 500\% (574.5 to 3619.8) (Figure 21) and the number of dropped messages exceeded 300,000 (Figure 23). It is clear from this data that high-density clusters of source nodes lead to exponential growth in the number of message transfers that the epidemic protocol attempts to create (Table 4), leading to completely unmanagable levels of overhead and considerably poorer performance. Epidemic is not a suitable routing protocol in scenarios which involve high-density source node clusters.\\
+\newline All 5 simulations for both vanilla and binary spray-and-wait started with 6 message copies and increased the amount by 6 each time, finally reaching a total of 30 message copies. Interestingly, when using just 6 message copies both versions of spray-and-wait engaged in the exact same number of message transfers (1215) but achieved 0 message deliveries (Figure 16). On closer inspection it was discovered that no messages were able to leave the confines of the source node cluster. The cause was clear: the message copy limit had been reached simply by transferring created messages to the other source nodes contained in the cluster. For messages to reach nodes outside of the cluster, the number of spray-and-wait message copies should exceed the number of source nodes in the cluster. This was proven true by the next simulation which increased the number of message copies to 12:\\
+\newline In scenario 1, both versions of spray-and-wait achieved a delivery probability of more than 50\% with 12 message copies (Figure 8). However, with a cluster of 10 source nodes, the protocols only managed 18.5\% (binary) and 14.4\% (vanilla) (Figure 16). However, increasing the number of message copies in later simulations saw the delivery probability for binary spray-and-wait reach comparable levels of the delivery probability seen in scenario 1, even exceeding them when using 24 and 30 message copies. The highest delivery probability achieved by binary was 69.6\% with 30 message copies (compared to 68.3\% with 30 message copies seen in scenario 1). Vanilla on the other hand reached a maximum delivery probability of only 50.2\% with 24 message copies (compared to 60.3\% with 30 message copies in scenario 1) and actually worsens with 30 message copies, producing only 49.8\% (Figure 16).\\
+\newline In Scenario 1, the two spray-and-wait versions achieved similar performance, yet vanilla only slightly outperformed binary. However, in scenario 2, it is clear that binary performed considerably better than vanilla. It achieved a higher delivery probability (Figure 16), lower overhead ratio (Figure 20) and lower average latency (Figure 18). Performing at its best (30 message copies) binary achieved an overhead ratio of 40.1 which is only 4\% greater than its overhead ratio of 30.6 achieved in scenario 1 (Figure 12). Additionally, the average latency of 1316.6 is 19\% greater than the latency of 1102 achieved in scenario 1 (Figure 10). The median hop count doubled from 2 to 4 which may be the cause of the increased latency (Table 2 and Table 5).\\
 \newline With a high-density cluster of 10 source nodes it is clear that binary spray-and-wait performs the best out of the 3 protocols, improving its delivery probability over single source nodes with only a small increase in overhead and latency. However, with a greater number of source nodes in the cluster, must come an increase in the message copy limit. Vanilla performed far poorer than it did with a single source node with a greatly decreased delivery probability. Epidemic's overhead increased exponentially and it achieved an extremely poor delivery probability.
 
 \newgeometry{top=1cm}
@@ -493,6 +509,8 @@ Median Hop Count & 0 & 2 & 2 & 2 & 2 \\ \hline
 In this scenario, 20 trapped victims are simulated by a single node each. Each node moves randomly within a small pre-defined range and is able to create its own messages.
 
 \begin{center}
+\captionof{table}{Performance data for the epidemic routing protocol in scenario 3}
+\vspace{6px}
 \begin{tabular}{|r|c|}
 \hline
 \textbf{Parameter} & \textbf{Epidemic} \\ \hline
@@ -509,6 +527,8 @@ Median Hop Count & 11 \\ \hline
 \end{center}
 
 \begin{center}
+\captionof{table}{Performance data for the binary spray-and-wait routing protocol in scenario 3 using different values for the message copy limit}
+\vspace{6px}
 \begin{tabular}{|r|c|c|c|c|c|}
 \hline
 \textbf{Parameter} & \textbf{SWB12} & \textbf{SWB24} & \textbf{SWB36} & \textbf{SWB48} & \textbf{SWB60} \\ \hline
@@ -525,6 +545,8 @@ Median Hop Count & 0 & 5 & 5 & 5 & 5 \\ \hline
 \end{center}
 
 \begin{center}
+\captionof{table}{Performance data for the vanilla spray-and-wait routing protocol in scenario 3 using different values for the message copy limit}
+\vspace{6px}
 \begin{tabular}{|r|c|c|c|c|c|}
 \hline
 \textbf{Parameter} & \textbf{SWV12} & \textbf{SWV24} & \textbf{SWV36} & \textbf{SWV48} & \textbf{SWV60} \\ \hline
@@ -540,9 +562,10 @@ Median Hop Count & 2 & 2 & 2 & 2 & 2 \\ \hline
 \end{tabular}
 \end{center}
 
-\vspace{16px}
+\newpage
+
 \noindent Scenario 3 increased the number of source nodes in the cluster from 10 to 20. The aim of this simulation was to compare the effectiveness of all 3 protocols when messages are created by an even higher density cluster of source nodes than the previous simulation. Note that, to keep the simulations accurate, the number of message copies for this scenario started at 12 and increased by 12 each time, finally reaching 60 message copies. This ensured that the difference between the number of message copies and the number of source nodes in the cluster was proportional to the difference seen in the previous simulation.\\
-\newline Similar to scenario 2, epidemic performs extremely poorly; its delivery probability falling another 0.5\% from 37.5\% to 37\%. This time, the overhead ratio increased by 84\% from (3619.8 in scenario 2 to 6666) and the number of dropped messages nearly doubled. Interestingly, the median hop count and average latency actually decreased. The facts remain the same: epidemic is unsuitable for situations involving high-density source node clusters.\\
+\newline Similar to scenario 2, epidemic performs extremely poorly; its delivery probability falling another 0.5\% from 37.5\% to 37\% (Figure 25). This time, the overhead ratio increased by 84\% from (3619.8 in scenario 2 to 6666) (Figure 29) and the number of dropped messages nearly doubled (Figure 31). Interestingly, the median hop count (Table 7) and average latency (Figure 27) actually decreased. However, the facts remain the same: with such a low delivery probability, epidemic is unsuitable for situations involving high-density source node clusters.\\
 \newline 
 
 \newgeometry{top=1cm}
