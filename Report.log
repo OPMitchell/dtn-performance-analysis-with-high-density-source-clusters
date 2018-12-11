@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.23)  11 DEC 2018 14:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.23)  11 DEC 2018 19:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -843,7 +843,7 @@ parison.png Graphic file (type png)
 <use Results/Graphs/DeliveryProbability/S1_DeliveryProbability_SprayAndWaitComp
 arison.png>
 Package pdftex.def Info: Results/Graphs/DeliveryProbability/S1_DeliveryProbabil
-ity_SprayAndWaitComparison.png used on input line 315.
+ity_SprayAndWaitComparison.png used on input line 316.
 (pdftex.def)             Requested size: 210.70132pt x 150.67165pt.
 
 <Results/Graphs/DeliveryProbability/S1_DeliveryProbability_AllComparison.png, i
@@ -854,7 +854,7 @@ ng Graphic file (type png)
 <use Results/Graphs/DeliveryProbability/S1_DeliveryProbability_AllComparison.pn
 g>
 Package pdftex.def Info: Results/Graphs/DeliveryProbability/S1_DeliveryProbabil
-ity_AllComparison.png used on input line 321.
+ity_AllComparison.png used on input line 322.
 (pdftex.def)             Requested size: 210.70132pt x 150.67165pt.
 
 <Results/Graphs/AverageLatency/S1_AverageLatency_SprayAndWaitComparison.png, id
@@ -865,7 +865,7 @@ g Graphic file (type png)
 <use Results/Graphs/AverageLatency/S1_AverageLatency_SprayAndWaitComparison.png
 >
 Package pdftex.def Info: Results/Graphs/AverageLatency/S1_AverageLatency_SprayA
-ndWaitComparison.png used on input line 329.
+ndWaitComparison.png used on input line 330.
 (pdftex.def)             Requested size: 210.70132pt x 150.67165pt.
 
 <Results/Graphs/AverageLatency/S1_AverageLatency_AllComparison.png, id=64, 319.
@@ -875,7 +875,7 @@ File: Results/Graphs/AverageLatency/S1_AverageLatency_AllComparison.png Graphic
 
 <use Results/Graphs/AverageLatency/S1_AverageLatency_AllComparison.png>
 Package pdftex.def Info: Results/Graphs/AverageLatency/S1_AverageLatency_AllCom
-parison.png used on input line 335.
+parison.png used on input line 336.
 (pdftex.def)             Requested size: 210.70132pt x 150.67165pt.
 
 <Results/Graphs/OverheadRatio/S1_OverheadRatio_SprayAndWaitComparison.png, id=6
@@ -885,7 +885,7 @@ Graphic file (type png)
 
 <use Results/Graphs/OverheadRatio/S1_OverheadRatio_SprayAndWaitComparison.png>
 Package pdftex.def Info: Results/Graphs/OverheadRatio/S1_OverheadRatio_SprayAnd
-WaitComparison.png used on input line 343.
+WaitComparison.png used on input line 344.
 (pdftex.def)             Requested size: 210.70132pt x 150.67165pt.
 
 <Results/Graphs/OverheadRatio/S1_OverheadRatio_AllComparison.png, id=66, 319.19
@@ -895,7 +895,7 @@ ile (type png)
 
 <use Results/Graphs/OverheadRatio/S1_OverheadRatio_AllComparison.png>
 Package pdftex.def Info: Results/Graphs/OverheadRatio/S1_OverheadRatio_AllCompa
-rison.png used on input line 349.
+rison.png used on input line 350.
 (pdftex.def)             Requested size: 210.70132pt x 150.67165pt.
 
 <Results/Graphs/MessagesDropped/S1_MessagesDropped_SprayAndWaitComparison.png, 
@@ -906,7 +906,7 @@ png Graphic file (type png)
 <use Results/Graphs/MessagesDropped/S1_MessagesDropped_SprayAndWaitComparison.p
 ng>
 Package pdftex.def Info: Results/Graphs/MessagesDropped/S1_MessagesDropped_Spra
-yAndWaitComparison.png used on input line 357.
+yAndWaitComparison.png used on input line 358.
 (pdftex.def)             Requested size: 210.70132pt x 150.67165pt.
 
 <Results/Graphs/MessagesDropped/S1_MessagesDropped_AllComparison.png, id=68, 31
@@ -916,11 +916,11 @@ ic file (type png)
 
 <use Results/Graphs/MessagesDropped/S1_MessagesDropped_AllComparison.png>
 Package pdftex.def Info: Results/Graphs/MessagesDropped/S1_MessagesDropped_AllC
-omparison.png used on input line 363.
+omparison.png used on input line 364.
 (pdftex.def)             Requested size: 210.70132pt x 150.67165pt.
 
 
-LaTeX Warning: Float too large for page by 79.06665pt on input line 368.
+LaTeX Warning: Float too large for page by 79.06665pt on input line 369.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -937,27 +937,27 @@ sults/Graphs/MessagesDropped/S1_MessagesDropped_AllComparison.png>] [13
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 433--439
+Underfull \hbox (badness 10000) in paragraph at lines 434--440
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 433--439
+Underfull \hbox (badness 10000) in paragraph at lines 434--440
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 433--439
+Underfull \hbox (badness 10000) in paragraph at lines 434--440
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 433--439
+Underfull \hbox (badness 10000) in paragraph at lines 434--440
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 433--439
+Underfull \hbox (badness 10000) in paragraph at lines 434--440
 
  []
 
@@ -1003,7 +1003,7 @@ parison.png Graphic file (type png)
 <use Results/Graphs/DeliveryProbability/S2_DeliveryProbability_SprayAndWaitComp
 arison.png>
 Package pdftex.def Info: Results/Graphs/DeliveryProbability/S2_DeliveryProbabil
-ity_SprayAndWaitComparison.png used on input line 449.
+ity_SprayAndWaitComparison.png used on input line 451.
 (pdftex.def)             Requested size: 210.70132pt x 150.67165pt.
 
 <Results/Graphs/DeliveryProbability/S2_DeliveryProbability_AllComparison.png, i
@@ -1014,7 +1014,7 @@ ng Graphic file (type png)
 <use Results/Graphs/DeliveryProbability/S2_DeliveryProbability_AllComparison.pn
 g>
 Package pdftex.def Info: Results/Graphs/DeliveryProbability/S2_DeliveryProbabil
-ity_AllComparison.png used on input line 455.
+ity_AllComparison.png used on input line 457.
 (pdftex.def)             Requested size: 210.70132pt x 150.67165pt.
 
 <Results/Graphs/AverageLatency/S2_AverageLatency_SprayAndWaitComparison.png, id
@@ -1025,7 +1025,7 @@ g Graphic file (type png)
 <use Results/Graphs/AverageLatency/S2_AverageLatency_SprayAndWaitComparison.png
 >
 Package pdftex.def Info: Results/Graphs/AverageLatency/S2_AverageLatency_SprayA
-ndWaitComparison.png used on input line 463.
+ndWaitComparison.png used on input line 465.
 (pdftex.def)             Requested size: 210.70132pt x 150.67165pt.
 
 <Results/Graphs/AverageLatency/S2_AverageLatency_AllComparison.png, id=82, 319.
@@ -1035,7 +1035,7 @@ File: Results/Graphs/AverageLatency/S2_AverageLatency_AllComparison.png Graphic
 
 <use Results/Graphs/AverageLatency/S2_AverageLatency_AllComparison.png>
 Package pdftex.def Info: Results/Graphs/AverageLatency/S2_AverageLatency_AllCom
-parison.png used on input line 469.
+parison.png used on input line 471.
 (pdftex.def)             Requested size: 210.70132pt x 150.67165pt.
 
 <Results/Graphs/OverheadRatio/S2_OverheadRatio_SprayAndWaitComparison.png, id=8
@@ -1045,7 +1045,7 @@ Graphic file (type png)
 
 <use Results/Graphs/OverheadRatio/S2_OverheadRatio_SprayAndWaitComparison.png>
 Package pdftex.def Info: Results/Graphs/OverheadRatio/S2_OverheadRatio_SprayAnd
-WaitComparison.png used on input line 477.
+WaitComparison.png used on input line 479.
 (pdftex.def)             Requested size: 210.70132pt x 150.67165pt.
 
 <Results/Graphs/OverheadRatio/S2_OverheadRatio_AllComparison.png, id=84, 319.19
@@ -1055,7 +1055,7 @@ ile (type png)
 
 <use Results/Graphs/OverheadRatio/S2_OverheadRatio_AllComparison.png>
 Package pdftex.def Info: Results/Graphs/OverheadRatio/S2_OverheadRatio_AllCompa
-rison.png used on input line 483.
+rison.png used on input line 485.
 (pdftex.def)             Requested size: 210.70132pt x 150.67165pt.
 
 <Results/Graphs/MessagesDropped/S2_MessagesDropped_SprayAndWaitComparison.png, 
@@ -1066,7 +1066,7 @@ png Graphic file (type png)
 <use Results/Graphs/MessagesDropped/S2_MessagesDropped_SprayAndWaitComparison.p
 ng>
 Package pdftex.def Info: Results/Graphs/MessagesDropped/S2_MessagesDropped_Spra
-yAndWaitComparison.png used on input line 491.
+yAndWaitComparison.png used on input line 493.
 (pdftex.def)             Requested size: 210.70132pt x 150.67165pt.
 
 <Results/Graphs/MessagesDropped/S2_MessagesDropped_AllComparison.png, id=86, 31
@@ -1076,11 +1076,11 @@ ic file (type png)
 
 <use Results/Graphs/MessagesDropped/S2_MessagesDropped_AllComparison.png>
 Package pdftex.def Info: Results/Graphs/MessagesDropped/S2_MessagesDropped_AllC
-omparison.png used on input line 497.
+omparison.png used on input line 499.
 (pdftex.def)             Requested size: 210.70132pt x 150.67165pt.
 
 
-LaTeX Warning: Float too large for page by 79.06665pt on input line 502.
+LaTeX Warning: Float too large for page by 79.06665pt on input line 504.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1097,17 +1097,27 @@ sults/Graphs/MessagesDropped/S2_MessagesDropped_AllComparison.png>] [16
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 567--570
+Underfull \hbox (badness 10000) in paragraph at lines 569--575
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 567--570
+Underfull \hbox (badness 10000) in paragraph at lines 569--575
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 567--570
+Underfull \hbox (badness 10000) in paragraph at lines 569--575
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 569--575
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 569--575
 
  []
 
@@ -1153,7 +1163,7 @@ parison.png Graphic file (type png)
 <use Results/Graphs/DeliveryProbability/S3_DeliveryProbability_SprayAndWaitComp
 arison.png>
 Package pdftex.def Info: Results/Graphs/DeliveryProbability/S3_DeliveryProbabil
-ity_SprayAndWaitComparison.png used on input line 580.
+ity_SprayAndWaitComparison.png used on input line 585.
 (pdftex.def)             Requested size: 210.70132pt x 151.80544pt.
 
 <Results/Graphs/DeliveryProbability/S3_DeliveryProbability_AllComparison.png, i
@@ -1164,7 +1174,7 @@ ng Graphic file (type png)
 <use Results/Graphs/DeliveryProbability/S3_DeliveryProbability_AllComparison.pn
 g>
 Package pdftex.def Info: Results/Graphs/DeliveryProbability/S3_DeliveryProbabil
-ity_AllComparison.png used on input line 586.
+ity_AllComparison.png used on input line 591.
 (pdftex.def)             Requested size: 210.70132pt x 152.20076pt.
 
 <Results/Graphs/AverageLatency/S3_AverageLatency_SprayAndWaitComparison.png, id
@@ -1175,7 +1185,7 @@ g Graphic file (type png)
 <use Results/Graphs/AverageLatency/S3_AverageLatency_SprayAndWaitComparison.png
 >
 Package pdftex.def Info: Results/Graphs/AverageLatency/S3_AverageLatency_SprayA
-ndWaitComparison.png used on input line 594.
+ndWaitComparison.png used on input line 599.
 (pdftex.def)             Requested size: 210.70132pt x 150.67165pt.
 
 <Results/Graphs/AverageLatency/S3_AverageLatency_AllComparison.png, id=99, 319.
@@ -1185,7 +1195,7 @@ File: Results/Graphs/AverageLatency/S3_AverageLatency_AllComparison.png Graphic
 
 <use Results/Graphs/AverageLatency/S3_AverageLatency_AllComparison.png>
 Package pdftex.def Info: Results/Graphs/AverageLatency/S3_AverageLatency_AllCom
-parison.png used on input line 600.
+parison.png used on input line 605.
 (pdftex.def)             Requested size: 210.70132pt x 150.67165pt.
 
 <Results/Graphs/OverheadRatio/S3_OverheadRatio_SprayAndWaitComparison.png, id=1
@@ -1195,7 +1205,7 @@ Graphic file (type png)
 
 <use Results/Graphs/OverheadRatio/S3_OverheadRatio_SprayAndWaitComparison.png>
 Package pdftex.def Info: Results/Graphs/OverheadRatio/S3_OverheadRatio_SprayAnd
-WaitComparison.png used on input line 608.
+WaitComparison.png used on input line 613.
 (pdftex.def)             Requested size: 210.70132pt x 150.67165pt.
 
 <Results/Graphs/OverheadRatio/S3_OverheadRatio_AllComparison.png, id=101, 319.1
@@ -1205,7 +1215,7 @@ ile (type png)
 
 <use Results/Graphs/OverheadRatio/S3_OverheadRatio_AllComparison.png>
 Package pdftex.def Info: Results/Graphs/OverheadRatio/S3_OverheadRatio_AllCompa
-rison.png used on input line 614.
+rison.png used on input line 619.
 (pdftex.def)             Requested size: 210.70132pt x 150.67165pt.
 
 <Results/Graphs/MessagesDropped/S3_MessagesDropped_SprayAndWaitComparison.png, 
@@ -1216,7 +1226,7 @@ png Graphic file (type png)
 <use Results/Graphs/MessagesDropped/S3_MessagesDropped_SprayAndWaitComparison.p
 ng>
 Package pdftex.def Info: Results/Graphs/MessagesDropped/S3_MessagesDropped_Spra
-yAndWaitComparison.png used on input line 622.
+yAndWaitComparison.png used on input line 627.
 (pdftex.def)             Requested size: 210.70132pt x 150.67165pt.
 
 <Results/Graphs/MessagesDropped/S3_MessagesDropped_AllComparison.png, id=103, 3
@@ -1226,11 +1236,11 @@ ic file (type png)
 
 <use Results/Graphs/MessagesDropped/S3_MessagesDropped_AllComparison.png>
 Package pdftex.def Info: Results/Graphs/MessagesDropped/S3_MessagesDropped_AllC
-omparison.png used on input line 628.
+omparison.png used on input line 633.
 (pdftex.def)             Requested size: 210.70132pt x 150.67165pt.
 
 
-LaTeX Warning: Float too large for page by 80.59576pt on input line 633.
+LaTeX Warning: Float too large for page by 80.59576pt on input line 638.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1243,19 +1253,19 @@ omparison.png> <./Results/Graphs/AverageLatency/S3_AverageLatency_AllComparison
 ng> <./Results/Graphs/OverheadRatio/S3_OverheadRatio_AllComparison.png> <./Resu
 lts/Graphs/MessagesDropped/S3_MessagesDropped_SprayAndWaitComparison.png> <./Re
 sults/Graphs/MessagesDropped/S3_MessagesDropped_AllComparison.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 665--668
+Underfull \hbox (badness 10000) in paragraph at lines 670--673
 []\OT1/cmr/m/n/10 Jackson, J. (2005). "The In-ter-plan-e-tary In-ter-net" \OT1/
 cmr/m/it/10 IEEE Spec-trum\OT1/cmr/m/n/10 . Avail-able at:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 665--668
+Underfull \hbox (badness 10000) in paragraph at lines 670--673
 \OT1/cmr/m/n/10 https://spectrum.ieee.org/telecom/internet/the-interplanetary-i
 nternet [Ac-cessed 24 Oct.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 718--719
+Underfull \hbox (badness 10000) in paragraph at lines 723--724
 []\OT1/cmr/m/n/10 The ONE (Op-por-tunis-tic Net-work En-vi-ron-ment Sim-u-la-to
 r). Avail-able at:
  []
@@ -1265,7 +1275,7 @@ r). Avail-able at:
 
 
 ]
-Overfull \hbox (54.22702pt too wide) in paragraph at lines 726--727
+Overfull \hbox (54.22702pt too wide) in paragraph at lines 731--732
 []\OT1/cmr/m/n/10 CA En-gi-neer-ing - 802.11p Au-to-mo-tive. Avail-able at: htt
 ps://www.caengineering.com/technologies/?a=802.11-
  []
@@ -1295,7 +1305,7 @@ msfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.
 pfb>
-Output written on Report.pdf (20 pages, 570596 bytes).
+Output written on Report.pdf (20 pages, 572828 bytes).
 PDF statistics:
  154 PDF objects out of 1000 (max. 8388607)
  83 compressed objects within 1 object stream
