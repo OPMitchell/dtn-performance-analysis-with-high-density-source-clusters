@@ -7,6 +7,7 @@
 \usepackage{caption}
 \usepackage{graphicx}
 \usepackage{subcaption}
+\usepackage{fixltx2e}
  
 \title{Evaluating the Performance Characteristics of Opportunistic Routing Protocols during an Emergency Fire \& Rescue Scenario involving a High-Density Cluster of Victims}
 \author{
@@ -25,9 +26,9 @@
 \newpage
 
 \section{Introduction}
-The aim of this project is to evaluate the performance characteristics of two different opportunistic routing protocols within a real world scenario, simulated by the Opportunistic Network Simulator (ONE). In the chosen scenario, victims of an arson attack are trapped within a museum, trying to contact the local hospital. The scenario is simulated by a network topology that represents the city of Helsinki and its transport network. The simulation was designed to mimic real-life scenarios which involve large amounts of active mobile devices in close proximity to each other in an enclosed space (high-density source clusters).\\
+The aim of this project is to evaluate the performance characteristics of two different opportunistic routing protocols within a real world scenario, simulated by the Opportunistic Network simulator (ONE). In the chosen scenario, victims of an arson attack are trapped within a museum, trying to contact the local hospital. The scenario is simulated by a network topology that represents the city of Helsinki and its transport network. The simulation was designed to mimic real-life scenarios which involve large amounts of active mobile devices in close proximity to each other in an enclosed space (high-density source clusters).\\
 \newline
-To begin, this paper will give a brief overview of opportunistic networks and the 2 routing protocols evaluated in the experiment. Then, the functionality of the ONE simulator will be described and the model of the scenario explained in detail, including its implementation. Using this model, simulations will be run and the results of their performances critically evaluated. A conclusion will then be drawn based on these results, summarising the pros and cons of both opportunistic networks protocols and their use in the observed scenario. Finally, the paper closes with a wider discussion of the usefulness of opportunistic networks in related real world use-cases.
+To begin, this paper will give a brief overview of opportunistic networks and the 2 routing protocols evaluated in the experiment. Then, the functionality of the ONE simulator will be described and the model of the scenario explained in detail, including its implementation. Using this model, simulations will be run and the results of their performances critically evaluated. A conclusion will then be drawn based on these results, summarising the pros and cons of both routing protocols and their use in the observed scenario. Finally, the paper closes with a wider discussion of the usefulness of opportunistic networks in related real world use-cases.
 
 \section{Background}
 In recent years, a growing number of devices have been utilizing mobile networking technology in less traditional environments, ranging from the GPS tracking of wildlife over huge distances [4], to the proposed establishment of an "Interplanetary Internet", capable of transmitting data lightyears in distance [5]. These non-static networks are decentralised and wireless, consisting of constantly mobile nodes, ranging from those with predictable mobility, such as transport systems, (e.g. buses and trams) to those with stochastic mobility, such as military/tactical networks. In all of these new environments, communication coverage is pervasive and essential for day-to-day operations. However, it's impossible to treat them like traditional networks with pre-determined communication paths due to their constant reconfiguration and non-guaranteed connectivity. As a result, computer networks deployed in such environments face new challenges such as large delays, intermittent communication links, and heterogeneous nodes with differing operating systems and network protocols.
@@ -37,37 +38,50 @@ A Mobile Ad-Hoc Network (MANET) is a self-configuring network of mobile devices,
 \begin{itemize}
 	\item Security is difficult to achieve because wireless links are vulnerable, the topology is dynamically changing, and there is no certification authority [8].
 	\item The use of wireless links results in a lower capacity than wired counterparts [6].
-	\item Nodes are mobile devices which rely on exhaustible battery power. Therefore saving energy is an important system design aspect [6].
+	\item Nodes are mobile devices which rely on exhaustible battery power. Therefore, saving energy is an important system design aspect [6].
 \end{itemize}
-MANETs assume high connectivity and established routes for transmitting data between nodes in a multi-hop fashion. As a result, the routing process in MANETs requires the discovery of an end-to-end path before data can be transported. However, because the topology is constantly changing in most mobile ad-hoc networks, there may not always be a feasible end-to-end path between source and destination [6]. Resultantly, MANETs perform poorly when connections are intermittent or there are long delays. This problem presents the need for the improved protocols used in opportunistic networks and Delay Tolerant Networks (DTNs).
+MANETs assume high connectivity and established routes for transmitting data between nodes in a multi-hop fashion. As a result, the routing process in MANETs requires the discovery of an end-to-end path before data can be transported. However, because the topology is constantly changing in most mobile ad-hoc networks, there may not always be a feasible end-to-end path between source and destination [6]. Resultantly, MANETs perform poorly when connections are intermittent or there are long delays. This problem presents the need for the improved protocols used in opportunistic networks such as Delay Tolerant Networks (DTNs).
 
 \subsection{Vehicular Ad-Hoc Networks (VANETs)}
 Vehicular Ad-Hoc Networks (VANETs) are a type of MANET where the network's nodes are represented by vehicles. Though MANETs and VANETs share many characteristics, there are unique challenges exclusive to VANETs that affect their usability, efficiency, and therefore their system design [9]:
 \begin{itemize}
-	\item Vehicles have the potential to move at very high speeds which can reduce the length of time available for packet transfer between nodes communicating in proximity to each other [9]. As VANETs also require end-to-end paths to be established before data can be sent, this issue is compounded by the movement of intermediary nodes in multi-hop transmissions. The path may be established before transmission begins, but disrupted before the packet can reach its destination.
+	\item Vehicles have the potential to move at very high speeds which can reduce the length of time available for packet transfer between nodes communicating in close proximity to each other [9]. As VANETs also require end-to-end paths to be established before data can be sent, this issue is compounded by the movement of intermediary nodes in multi-hop transmissions. An end-to-end path may be established before transmission begins, but disrupted before the packet can reach its destination.
 	\item The data transmitted by vehicles may be critical and life-saving, such as information about road accidents and traffic or the location of casualties who need assistance from ambulance crews. It is therefore essential that such information is received correctly and in a timely fashion [9].
 \end{itemize}
 It is useful to note that the movement of nodes in a VANET can be considered more predictable than coventional ad-hoc networks because vehicles follow set paths such as roads, railway lines, etc.
 
 \subsection{Delay/Disruption Tolerant Networks (DTNs)}
-In environments where disruptions and delays are expected, traditional networking protocols such as TCP [3] are unsuitable because they assume there is an end-to-end connection with low message loss and minimal delay [2]. In decentralised, mobile ad-hoc networks, nodes are constantly moving and there is likely no feasible end-to-end path between source and destination. In order to combat the challenges presented by delays and disruptions, the assumption of an existing end-to-end path from source to destination is dropped. Instead, routing protocols have been developed which utilise a "store-and-forward" approach where data is gradually transported in single hops and stored in different nodes with the desire of eventually reaching its intended destination [2]. Typically, this approach to network architecture is called Delay/Disruption Tolerant Networking (DTN).\\
+In environments where disruptions and delays are expected, traditional networking protocols such as TCP [3] are unsuitable because they assume there is an end-to-end connection with low message loss and minimal delay [2]. In decentralised, mobile ad-hoc networks, nodes are constantly moving and there is likely no feasible end-to-end path between source and destination. In order to combat the challenges presented by delays and disruptions, the assumption of an existing end-to-end path from source to destination is dropped. Instead, routing protocols have been developed which utilise a ``store-and-forward'' approach [19] where data is gradually transported in single hops and stored in different nodes with the desire of eventually reaching its intended destination [2]. Typically, this approach to network architecture is called Delay/Disruption Tolerant Networking (DTN).\\
 \noindent The performance of a DTN depends on the routing protocol used in a given scenario. DTN routing protocols can either be replication based (flooding) or forwarding based [10]:\\
 \begin{itemize}
 	\item In a replication based protocol, when one node encounters another it will forward a copy of its message without deleting its own. This means there are multiple copies of the message in the network with aims to increase the probability that a message will eventually reach its destination. However, in this approach a large amount of resources are used, particularly buffer space. Once the message has been delivered, all existing copies of the message are made redundant but still continue to exist, taking up unecessary space [10].
 	\item In a forwarding based protocol, a message can only be stored by a single node at a time. In constrast to a replication based scheme, the node forwarding the message deletes its own copy, making the receiver the sole custodian of the message. Forwarding based protocols tend to use heuristics to evaluate encountered nodes and work out which path is most likely to get the message to its destination the quickest.
 \end{itemize}
-\newpage
+
+\subsection{Opportunistic Networks}
+With MANETs, VANETs and DTNs explained, it is now possible to define an \textbf{opportunistic network}. Firstly, MANETs (and by extension, VANETs) are NOT considered opportunistic networks [18]. The difference is subtle: MANETs are situated on the network layer of the OSI Model, allowing them full control of routing, leading to assumptions of high-connectivity and the potential creation of established end-to-end routes via intermediaries. They assume that nodes trust each other and are typically deployed in emergency situations. However, opportunistic networks are formed by nodes that do not know or trust each other. They are situated on the application layer of the OSI model which means they have no routing control and may only transport data in a single-hop fashion between neighbouring nodes. DTNs, on the other hand, can be considered opportunistic networks and are typically regarded as their most extreme case. All DTNs (and therefore all opportunistic networks) employ the store-and-forward [19] strategy which can be described in the following way:
+
+\begin{figure}[h!]
+\captionsetup{justification=centering, font=footnotesize}
+\centering
+  \includegraphics[width=.75\linewidth]{Screenshots/StoreAndForward.png}
+  \captionof{figure}{Diagram demonstrating the store-and-forward message passing strategy used in DTNs [19]}
+  \label{fig:test1}
+\end{figure}
+
+\noindent The store-and-forward strategy is very simple and reminiscent of electronic mail systems. When a node receives a new message, it stores it in its buffer. When that node encounters a relay, it then accesses its buffer and forwards the stored message. This continues in the hope that an encountered node will eventually meet the destination node and deliver the message. The store-and-forward strategy is highly appropriate for networks with unpredictable communication patterns because nodes don't need to know when the next node will come into contact or where it currently is, only to store the data persistently and pass it on when necessary.
 
 \subsection{Delay/Disruption Tolerant Network (DTN) Protocols}
 \subsubsection{Epidemic}
-Epidemic [11][12] is a simple replication based routing protocol and is somewhat naïve when compared to more advanced protocols. The objective of the epidemic routing protocol is to pass copies of a message to as many nodes as possible in the hope that it eventually reaches its intended destination with minimal delay. Any node that doesn't already have the message will be given a copy and there can exist as many copies of the message as there are nodes in the network. The protocol is called 'epidemic' because this indiscriminate method of dissemination is similar to the way in which an infectious disease can propogate in a community; spreading when people come into contact with each other.\\
+Epidemic [11][12] is a simple replication based routing protocol and is somewhat naïve when compared to more advanced protocols. The objective of the epidemic routing protocol is to pass copies of a message to as many nodes as possible in the hope that it eventually reaches its intended destination with minimal delay. Any node that doesn't already have the message will be given a copy and there can exist as many copies of the message as there are nodes in the network. The protocol is called 'epidemic' because this indiscriminate method of dissemination is similar to the way in which an infectious disease can propogate through a community; spreading when people come into contact with each other.\\
 \newline Theoretically, Epidemic can be seen as an optimal routing protocol if the network's resource are unconstrained. However, in a deployed DTN, the size of each node's message buffer is finite and, because no acknowledgement of receipt is transmitted by the destination node, it is likely that redundant data will still take up unecessary space in the network. Some research has produced extended versions of the epidemic protocol which mitigate this issue, typically by sending an additional message that confirms receipt and orders 'infected' nodes to delete redundant messages [12].
+
 
 \begin{figure}[h!]
 \captionsetup{justification=centering, font=footnotesize}
 \centering
   \includegraphics[width=.98\linewidth]{Screenshots/Epidemic.png}
-  \captionof{figure}{Screenshot of epidemic message propagation}
+  \captionof{figure}{Diagram showing epidemic message propagation. S is the source node and sends newly encountered nodes C\textsubscript{1} and C\textsubscript{2} message copies at time T\textsubscript{1}. At time T\textsubscript{2}, C\textsubscript{2} encounters a new node, C\textsubscript{3}, and sends it a copy of the message who in turn delivers it to D, the destination. [11]}
   \label{fig:test1}
 \end{figure}
 
@@ -78,31 +92,28 @@ Spray-and-Wait [13] is a routing protocol that aims to achieve the advantages of
 	\item \textbf{Binary} - start with \textbf{\textit{L}} copies and transmit \textbf{\textit{L}/2} copies to the first node encountered. Both these nodes then transmit \textbf{\textit{n}/2} copies of the message to any new nodes they encounter that do not have the message, where \textbf{\textit{n}} is the total number of messages a node currently holds. When a node has 1 copy remaining, it waits until the destination node comes into direct contact.
 \end{itemize}
 
-\begin{figure}[h!]
-\captionsetup{justification=centering, font=footnotesize}
-\centering
-\begin{minipage}[t]{.5\textwidth}
-  \centering
-  \includegraphics[width=.98\linewidth]{Screenshots/SWBinary.png}
-  \captionof{figure}{Example of binary spray-and-wait message propagation}
-  \label{fig:test1}
-\end{minipage}%
-\begin{minipage}[t]{.5\textwidth}
-  \centering
-  \includegraphics[width=.98\linewidth]{Screenshots/SWVanilla.png}
-  \captionof{figure}{Example of vanilla spray-and-wait message propagation}
-  \label{fig:test2}
-\end{minipage}
-\end{figure}
+%\begin{figure}[h!]
+%\captionsetup{justification=centering, font=footnotesize}
+%\centering
+%\begin{minipage}[t]{.5\textwidth}
+%  \centering
+%  \includegraphics[width=.98\linewidth]{Screenshots/SWBinary.png}
+%  \captionof{figure}{Example of binary spray-and-wait message %propagation}
+%  \label{fig:test1}
+%\end{minipage}%
+%\begin{minipage}[t]{.5\textwidth}
+%  \centering
+%  \includegraphics[width=.98\linewidth]{Screenshots/SWVanilla.png}
+%  \captionof{figure}{Example of vanilla spray-and-wait message %propagation}
+%  \label{fig:test2}
+%\end{minipage}
+%\end{figure}
 
-Binary has an advantage over vanilla because messages are disseminated away from the source at a faster rate [13].
-
-\subsection{Opportunistic Networks}
-With MANETs, VANETs and DTNs explained, it is now possible to define an \textbf{opportunistic network}. Firstly, MANETs (and by extension, VANETs) are NOT considered opportunistic networks, a result of their assumptions of high-connectivity and established routes for multi-hop data transmission. Opportunistic networks, by definition, only transport data in a single-hop fashion, employing the store-and-forward strategy which can be described in the following way:
+\noindent Binary has an advantage over vanilla because messages are disseminated away from the source at a faster rate [13].
 
 \section{ONE Simulator}
 The ONE (Opportunistic Network Environment) Simulator [14][15] is a DTN simulator developed and maintained by researchers on the SINDTN and CATDTN projects and supported by Nokia Research Center (Finland). Where existing DTN simulators focused on solely on routing simulation, ONE combines DTN routing, mobility modelling, and visualisation into one package [14]. It is a complex tool which is extensible and provides useful modules for the reporting and analysis of simulated network environments.\\
-\newline ONE is useful for comparing, contrasting and analysing the performance of opportunistic networking protocols in different scenarios, making it the ideal tool for this research article. Scenarios (or network models) are comprised of network nodes (hosts) which all possess user-specified networking interfaces, energy sources, buffer-sizes, and computing power. Collections of identical nodes can be defined as groups with default properties, though an individual node's settings can be overwritten if necessary, for example, to ensure a node uses a different routing protocol from the rest of its group. Nodes act autonomously, passing messages to other nodes within their communication range according to their designated routing protocol.\\ 
+\newline ONE is useful for comparing, contrasting and analysing the performance of opportunistic networking protocols in different scenarios, making it the ideal tool for this research paper. Scenarios (or network models) are comprised of network nodes (hosts) which all possess user-specified networking interfaces, energy sources, buffer-sizes, and computing power. Collections of identical nodes can be defined as groups with default properties, though an individual node's settings can be overwritten if necessary, for example, to ensure a node uses a different routing protocol from the rest of its group. Nodes act autonomously, passing messages to other nodes within their communication range according to their designated routing protocol.\\ 
 \newline ONE also makes a comprehensive framework for the mobility of nodes available to the user, allowing them to customise the travel speed of individual nodes or groups of nodes, and even import real-world movement traces for nodes to follow. This high fidelity node mobility framework allows users to easily differentiate between different node types (e.g. pedestrians will move slower than cars and follow a different route) and permits the creation of highly accurate scenarios that use real-world data, or hybrid scenarios which combine real traces with user-defined rules.\\
 
 \begin{figure}[h!]
@@ -110,31 +121,31 @@ The ONE (Opportunistic Network Environment) Simulator [14][15] is a DTN simulato
 \centering
 \begin{minipage}[t]{.5\textwidth}
   \centering
-  \includegraphics[width=.98\linewidth]{Screenshots/ConfigFileExample.png}
+  \includegraphics[width=.9\linewidth]{Screenshots/ConfigFileExample.png}
   \captionof{figure}{Screenshot snippet of the ONE simulator's config file}
   \label{fig:test1}
 \end{minipage}%
 \begin{minipage}[t]{.5\textwidth}
   \centering
-  \includegraphics[width=.98\linewidth]{Screenshots/ReportFileExample.png}
+  \includegraphics[width=.9\linewidth]{Screenshots/ReportFileExample.png}
   \captionof{figure}{Screenshot snippet of a report file generated by the ONE simulator}
   \label{fig:test2}
 \end{minipage}
 \end{figure}
 
-\newline The ONE Simulator allows users to define ``Message Events'' which are scheduled events involving the creation and movement of messages from source to destination. The user can define the minimum and maximum message size and interval between message creations, a range of source and destination nodes, and a prefix identifier for each message. This system is useful because it allows users to design unique messages for specific scenarios (e.g. one large message sent from a specific node to a specific destination).\\
-\newline Creating custom scenarios involves the editing of the ONE simulator's config file. This file contains all the settings that the simulator uses each time it is loaded. It is extremely customisable and allows the user to change the amount of nodes, what protocol they use, where they are positioned, how they travel and much more. To simulate a given scenario using ONE, the user needs to ensure the correct config file for that scenario is included as the `default\_settings.txt' file in the ONE source folder. For this paper, each scenario is represented by an individual config file.\\
+\noindent The ONE Simulator allows users to define ``message events'' which are scheduled events involving the creation and movement of messages from source to destination. The user can define the minimum and maximum message size and interval between message creations, a range of source and destination nodes, and a prefix identifier for each message. This system is useful because it allows users to design unique messages for specific scenarios (e.g. one large message sent from a specific node to a specific destination).\\
+\newline Creating custom scenarios involves the editing of the ONE simulator's config file. This file contains all the settings that the simulator uses each time it is loaded. It is extremely customisable and allows the user to change the amount of nodes, what protocol they use, where they are positioned, how they travel and much more. To simulate a given scenario using ONE, the user needs to ensure the correct config file for that scenario is included as the \texttt{default\_settings.txt} file in the ONE source folder. For this paper, each scenario is represented by an individual config file.\\
 \newline The ONE Simulator provides a GUI that allows users to inspect each node present in the model. The user can also inspect the path of individual messages, pause the simulation, and change the speed of the GUI's refresh rate. ONE succeeds in using this GUI to create an accurate visualisation of the user-specified network model. Nodes are clearly represented by prefix identifiers, above an underlayed map image (in this case, an image of Helsinki's transit network). Relationships between nodes are represented by direct lines drawn between them and these consistently update with the simulation data. Messages in each node's buffer are represented by small stacks of squares next to each node's name. The range of each node's network interface is represented as a green circle. When another node is positioned within this circle, message transfer may commence.\\
 
 \begin{figure}[h!]
 \captionsetup{justification=centering, font=footnotesize}
 \centering
-  \includegraphics[width=.98\linewidth]{Screenshots/ONEGUI.png}
+  \includegraphics[width=.75\linewidth]{Screenshots/ONEGUI.png}
   \captionof{figure}{Screenshot of the ONE simulator GUI}
   \label{fig:test1}
 \end{figure}
 
-\newline The ONE Simulator provides a comprehensive report feedback system which records and statistically analyses many different aspects of a simulation, providing the user with .txt output files. Users can specify which reports to generate in ONE's config file. Examples of reports include statistics on delivery-rate, latency, the number of created connections, and the level of buffer occupancy, just to name a few. The evaluation section of this paper was produced using data from the reports created from each simulation.\\
+\noindent The ONE Simulator provides a comprehensive report feedback system which records and statistically analyses many different aspects of a simulation, providing the user with .txt output files. Users can specify which reports to generate in ONE's config file. Examples of reports include statistics on delivery-rate, latency, the number of created connections, and the level of buffer occupancy, just to name a few. The evaluation section of this paper was produced using data from the reports created from each simulation.\\
 \newline Finally, the ONE Simulator is open-source and can therefore be extended in any way the user sees fit. This typically includes the modification of existing class files or the creation of new ones. For example, to use an unimplemented routing protocol the user would have to write a new set of source files to include in the software package. The ONE Simulator is very well documented and including new functionality is generally a straightforward process and there are many well-structured classes to inherit from too; the software was built with extension in mind.\\
 
 \section{Experiment}
@@ -159,13 +170,13 @@ This scenario has been created using the ONE simulator. However, three slightly 
 \begin{minipage}[t]{.5\textwidth}
   \centering
   \includegraphics[width=.98\linewidth]{Screenshots/1Node.png}
-  \captionof{figure}{Screenshot of the ONE simulator showing a single source node}
+  \captionof{figure}{Screenshot of the ONE simulator showing a single source node (red circle) and the destination (blue circle)}
   \label{fig:test1}
 \end{minipage}%
 \begin{minipage}[t]{.5\textwidth}
   \centering
   \includegraphics[width=.98\linewidth]{Screenshots/10Nodes.png}
-  \captionof{figure}{Screenshot of the ONE simulator showing a high-density cluster of 10 source nodes}
+  \captionof{figure}{Screenshot of the ONE simulator showing a high-density cluster of 10 source nodes (red circle) and the destination (blue circle)}
   \label{fig:test2}
 \end{minipage}
 \end{figure}
@@ -189,7 +200,7 @@ Some common settings have been selected for every scenario. All nodes utilise ne
 \hline
 \textbf{Parameter} & \textbf{Value} \\ \hline
 Simulation Time & 120 Minutes \\ \hline
-Node Types & Cars, Pedestrians, Static (Hospital) \\ \hline
+Node Types & People (trapped victims), Cars, Static (Hospital) \\ \hline
 Message Size & 50-500KB \\ \hline
 Message TTL & 60 minutes \\ \hline
 Network Interface & Wi-Fi 802.11p \\ \hline
@@ -199,11 +210,8 @@ Buffer Size & 10MB \\ \hline
 \end{tabular}
 \end{center}
 
-\subsection{Group Parameters}
-Talk about cluster movement here
-\subsubsection{Scenario 1}
-\subsubsection{Scenario 2}
-\subsubsection{Scenario 3}
+\subsection{A Note on Cluster Movement}
+To model the trapped victims' movement, the \texttt{movement/ClusterMovement} class was edited. Inside the class, the starting position of node groups using clustered movement was set to the location of the Helsinki museum of contemporary art. Additionally, the range variable was reduced. The node group for the victims uses this edited \texttt{ClusterMovement} class to mimic random movement within a confined space.
 
 \newpage
 \section{Evaluation}
@@ -279,6 +287,7 @@ Median Hop Count & 2 & 2 & 2 & 2 & 2\\ \hline
 \end{tabular}
 \end{center}
 
+\vspace{16px}
 \noindent Scenario 1 was designed to act as a point of reference for the other scenarios. To accurately measure the effect of high-density source clusters on the performance of opportunistic routing protocols, it was first necessary to gauge how they perform with a single source node and then compare the results.\\
 \newline Epidemic performed relatively poorly when compared to both versions of the spray-and-wait protocol, achieving a delivery probability of only 40.7\% compared to both vanilla and binary spray-and-wait's maximum of 68.3\% when using 30 message copies. Additionally, epidemic started a far greater number of message transfers and, as a result, dropped far more messages than both vanilla and binary spray-and-wait combined (53841 for epidemic, 4438 for binary spray-and-wait with 30 message copies, and 2780 for vanilla spray-and-wait with 30 message copies). This is likely the result of both the messages' relatively short TTL and the fact that each node's buffer fills far quicker due to the sheer quantity of replicated messages in the network, leaving them unable to accept new copies and dropping them. The high amount of relayed messages compared to the low delivery rate also created significant overhead for the epidemic routing protocol; nearly 10 times greater than that of the greatest overhead produced by binary spray-and-wait (574.5 for epidemic and 38.6 for binary spray-and-wait with 30 message copies). Interestingly, epidemic performed worse in all but one of the evaluation criteria; achieving an average latency of 786.4 whilst all the spray-and-wait simulations failed to reach a latency lower than 1000. This is likely a singular benefit of epidemic's uncontrolled replicative behaviour: messages are disseminated far quicker because nodes are guaranteed to transfer all previously unseen messages on contact. It is highly likely that increasing the buffer size of each node would allow epidemic to perform significantly better. However, in this scenario, it is easy to rule out epidemic as inferior to both versions of the spray-and-wait protocol.\\
 \newline Out of the 2 spray-and-wait routing protocols, with low number of message copies, vanilla consistently achieved the highest delivery probability when there was only one source node in the cluster. However, when reaching 24 or greater message copies, the difference in the delivery probability of both protocols narrows, ultimately becoming the same at 30 copies (68.3\%). It is interesting to note that, with a greater number of message copies, comes increasingly diminished returns; the increase in delivery probability per extra copy becomes negligable. At their optimum (30 message copies) both protocols deliver 166 messages but binary spray-and-wait starts 76\% more message transfers leading to 60\% more dropped messages. This also leads to a greater overheard ratio (38.6 for binary and 21.5 for vanilla).\\
@@ -404,6 +413,7 @@ Median Hop Count & 0 & 2 & 2 & 2 & 2 \\ \hline
 \end{tabular}
 \end{center}
 
+\vspace{16px}
 \noindent Scenario 2 increased the number of source nodes in the cluster from 1 to 10. The aim of this simulation was to compare the effectiveness of all 3 protocols when messages are created by a high-density cluster of source nodes rather than a single node. The simulation was designed to mimic real-life scenarios which involve large amounts of active mobile devices in close proximity to each other in an enclosed space.\\
 \newline With the addition of the extra source nodes, epidemic's delivery probability fell from 40.7\%, seen in scenario 1, to 37.5\%, delivering only 91 messages. Additionally, epidemic's hop count increased from 6 to 16, the overhead ratio increased by 500\% (574.5 to 3619.8) and the number of dropped messages exceeded 300,000. It is clear from this data that high-density clusters of source nodes lead to exponential growth in the number of message transfers that the epidemic protocol attempts to create, leading to completely unmanagable levels of overhead and considerably poorer performance. Epidemic is not a suitable routing protocol in scenarios which involve high-density source node clusters.\\
 \newline All 5 simulations for both vanilla and binary spray-and-wait started with 6 message copies and increased the amount by 6 each time, finally reaching a total of 30 message copies. Interestingly, when using just 6 message copies both versions of spray-and-wait engaged in the exact same number of message transfers (1215) but achieved 0 message deliveries. On closer inspection it was discovered that no messages were able to leave the confines of the source node cluster. The cause was clear: the message copy limit had been reached simply by transferring created messages to the other source nodes contained in the cluster. For messages to reach nodes outside of the cluster, the number of spray-and-wait message copies should exceed the number of source nodes in the cluster. This was proven true by the next simulation which increased the number of message copies to 12:\\
@@ -530,6 +540,7 @@ Median Hop Count & 2 & 2 & 2 & 2 & 2 \\ \hline
 \end{tabular}
 \end{center}
 
+\vspace{16px}
 \noindent Scenario 3 increased the number of source nodes in the cluster from 10 to 20. The aim of this simulation was to compare the effectiveness of all 3 protocols when messages are created by an even higher density cluster of source nodes than the previous simulation. Note that, to keep the simulations accurate, the number of message copies for this scenario started at 12 and increased by 12 each time, finally reaching 60 message copies. This ensured that the difference between the number of message copies and the number of source nodes in the cluster was proportional to the difference seen in the previous simulation.\\
 \newline Similar to scenario 2, epidemic performs extremely poorly; its delivery probability falling another 0.5\% from 37.5\% to 37\%. This time, the overhead ratio increased by 84\% from (3619.8 in scenario 2 to 6666) and the number of dropped messages nearly doubled. Interestingly, the median hop count and average latency actually decreased. The facts remain the same: epidemic is unsuitable for situations involving high-density source node clusters.\\
 \newline 
@@ -690,6 +701,15 @@ Jiang, D. \& Delgrossi, L. (2008)
 
 \bibitem{WAVE}
 CA Engineering - 802.11p Automotive. Available at: https://www.caengineering.com/technologies/?a=802.11-wi-fi\&id=802.11p-automotive [Accessed 9th Dec. 2018]
+
+\bibitem{OPPNETS}
+Pelusi, L., Passarella, A., \& Conti, M. (2006)
+``Opportunistic Networking: Data Forwarding in Disconnected Mobile Ad Hoc Networks''
+\textit{IEEE Communications Magazine archive \textbf{44}(1), November 2006}, pp.134-141.
+
+\bibitem{StoreAndForward}
+Warthman, F. (2012)
+"Delay-and Disruption-Tolerant Networks (DTNs) - A Tutorial" \textit{Interplanetary Internet Special Interest Group, 2012}
 
 \end{thebibliography}
  
