@@ -19,6 +19,8 @@
 \contentsline {subsection}{\numberline {5.3}Scenario 1}{10}
 \contentsline {subsection}{\numberline {5.4}Scenario 2}{13}
 \contentsline {subsection}{\numberline {5.5}Scenario 3}{16}
-\contentsline {section}{\numberline {6}Conclusion}{19}
-\contentsline {section}{\numberline {7}Wider Discussion}{19}
-\contentsline {section}{References}{19}
+\contentsline {section}{\numberline {6}Conclusion - Pros and Cons}{19}
+\contentsline {section}{\numberline {7}Wider Discussion - The Benefits of Opportunistic Networks for Mass Animal Monitoring}{19}
+\contentsline {subsection}{\numberline {7.1}Automated Cattle Monitoring}{20}
+\contentsline {subsection}{\numberline {7.2}ZebraNet}{20}
+\contentsline {section}{References}{21}
